@@ -41,7 +41,7 @@ header{height:82px;background:rgba(247,248,246,.96);border-bottom:1px solid var(
 .hero .claim{font-family:"Manrope";font-size:22px;line-height:1.25;margin:0 0 30px}
 .hero .claim strong{font-weight:800}
 .hero-photo{position:relative}
-.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:grayscale(100%)}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:none}
 .hero-photo:after{content:"";position:absolute;right:-18px;bottom:-18px;width:42%;height:42%;border-right:4px solid var(--accent);border-bottom:4px solid var(--accent);z-index:-1}
 
 .problem-head{display:grid;grid-template-columns:.34fr 1fr;gap:70px;margin-bottom:62px}
@@ -85,7 +85,7 @@ header{height:82px;background:rgba(247,248,246,.96);border-bottom:1px solid var(
 
 .about{display:grid;grid-template-columns:.82fr 1.18fr;gap:80px;align-items:center}
 .about-photo{position:relative}
-.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:grayscale(100%)}
+.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:none}
 .about-photo:before{content:"";position:absolute;left:-16px;top:-16px;width:42%;height:42%;border-left:4px solid var(--accent);border-top:4px solid var(--accent);z-index:-1}
 .about .copy{margin-top:20px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
@@ -152,6 +152,23 @@ footer{background:var(--dark);color:#fff;padding:32px 0}
 }
 </style>
 
+<style id="final-logo-motion">
+.nav > a:first-child{perspective:1000px;display:flex;align-items:center}
+.nav > a:first-child .logo{transform-style:preserve-3d;backface-visibility:hidden;transform-origin:center center;animation:logoEntrance 850ms cubic-bezier(.16,1,.3,1) both}
+.logo-click-flip{animation:logoFlip 780ms cubic-bezier(.2,.8,.2,1) both !important}
+@keyframes logoEntrance{0%{opacity:0;transform:perspective(1000px) rotateY(-70deg) translateX(-14px) scale(.9)}70%{opacity:1;transform:perspective(1000px) rotateY(7deg) translateX(2px) scale(1.01)}100%{opacity:1;transform:perspective(1000px) rotateY(0) translateX(0) scale(1)}}
+@keyframes logoFlip{0%{transform:perspective(1000px) rotateY(0) scale(1)}45%{transform:perspective(1000px) rotateY(190deg) scale(1.04)}75%{transform:perspective(1000px) rotateY(360deg) scale(1.025) rotateZ(3deg)}100%{transform:perspective(1000px) rotateY(360deg) scale(1) rotateZ(0)}}
+@media(prefers-reduced-motion:reduce){.nav > a:first-child .logo{animation:none!important}.logo-click-flip{animation:none!important}}
+</style>
+<style id="final-content-interactions">
+.issue-grid .issue,.service-grid .service{position:relative;overflow:hidden;transition:transform .42s cubic-bezier(.2,.8,.2,1),box-shadow .42s cubic-bezier(.2,.8,.2,1),background-color .32s ease}
+.issue-grid .issue::after,.service-grid .service::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#b8ff3d;transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.issue-grid .issue:hover,.service-grid .service:hover{transform:translateY(-8px);box-shadow:0 18px 34px rgba(0,0,0,.10);background:#fff;z-index:2}
+.issue-grid .issue:hover::after,.service-grid .service:hover::after{transform:scaleX(1)}
+.issue-grid .issue strong,.issue-grid .issue span,.service-grid .service h3,.service-grid .service p{position:relative;transition:transform .35s ease,color .35s ease}
+.issue-grid .issue:hover strong,.issue-grid .issue:hover span,.service-grid .service:hover h3,.service-grid .service:hover p{transform:translateX(6px)}
+@media(max-width:900px){.issue-grid .issue.in-view,.service-grid .service.in-view{transform:translateY(-6px);box-shadow:0 16px 30px rgba(0,0,0,.10)}}
+</style>
 <style id="restored-original-interaction-system">
 :root{
   --tr-lime:#b8ff3d;
@@ -360,22 +377,113 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{transition:none!important;animation:none!important}
 }
-<style id="pdf-text-only-polish">
-.background-note{margin-top:56px;max-width:900px}
-.background-note .kicker{margin-bottom:14px}
-@media(max-width:650px){.background-note{margin-top:42px}}
 </style>
-<style id="final-real-card-interactions">
-.issue,.service{position:relative;overflow:hidden;transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,border-color .35s ease}
-.issue:hover,.service:hover{transform:translateY(-6px);box-shadow:0 16px 30px rgba(0,0,0,.09);z-index:2}
-.issue::before,.service::before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:#b8ff3d;transform:scaleY(0);transform-origin:bottom;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
-.issue:hover::before,.service:hover::before{transform:scaleY(1)}
-.issue strong,.issue span,.service h3,.service p{position:relative;transition:transform .35s ease}
-.issue:hover strong,.issue:hover span,.service:hover h3,.service:hover p{transform:translateX(5px)}
-@media(max-width:900px){.issue.in-view,.issue.touch-active,.service.in-view,.service.touch-active{transform:translateY(-6px);box-shadow:0 18px 38px rgba(17,19,21,.10)}
-.hero-photo.in-view img,.about-photo.in-view img,.hero-photo.touch-active img,.about-photo.touch-active img{transform:scale(1.045)}}
-@media(prefers-reduced-motion:reduce){.issue,.service,.issue::before,.service::before,.issue strong,.issue span,.service h3,.service p{transition:none}.issue:hover,.service:hover{transform:none}}
-</style>
+
+<style id="qa-interaction-fix">
+/* FINAL QA: every interactive block explicitly receives the intended desktop hover. */
+.issue-grid .issue,
+.service-grid .service,
+.hero-photo,
+.about-photo{
+  will-change:transform;
+}
+.issue-grid .issue{
+  position:relative;
+  overflow:hidden;
+  transition:transform .38s cubic-bezier(.2,.8,.2,1),
+             box-shadow .38s cubic-bezier(.2,.8,.2,1),
+             background-color .32s ease;
+}
+.issue-grid .issue::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;height:3px;
+  background:#b8ff3d;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.issue-grid .issue:hover{
+  transform:translateY(-8px) !important;
+  box-shadow:0 18px 34px rgba(0,0,0,.10);
+  background:#fff;
+  z-index:2;
+}
+.issue-grid .issue:hover::after{transform:scaleX(1)}
+.issue-grid .issue strong,
+.issue-grid .issue span{
+  transition:transform .35s ease,color .35s ease;
+  position:relative;
+  z-index:1;
+}
+.issue-grid .issue:hover strong,
+.issue-grid .issue:hover span{transform:translateX(6px)}
+
+.service-grid .service{
+  position:relative;
+  overflow:hidden;
+  transition:transform .42s cubic-bezier(.2,.8,.2,1),
+             box-shadow .42s cubic-bezier(.2,.8,.2,1),
+             border-color .35s ease,
+             background-color .35s ease;
+}
+.service-grid .service::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;width:3px;height:100%;
+  background:#b8ff3d;
+  transform:scaleY(0);
+  transform-origin:bottom;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.service-grid .service:hover{
+  transform:translateY(-10px) scale(1.018) !important;
+  box-shadow:0 22px 44px rgba(17,19,21,.14);
+  border-color:#b8ff3d;
+  z-index:3;
+}
+.service-grid .service:hover::before{transform:scaleY(1)}
+.service-grid .service h3,
+.service-grid .service p,
+.service-grid .service-no{
+  position:relative;
+  transition:transform .35s ease,color .35s ease;
+}
+.service-grid .service:hover h3,
+.service-grid .service:hover p{transform:translateX(7px)}
+.service-grid .service:hover .service-no{transform:translateY(-4px);color:#16191b}
+
+.hero-photo,
+.about-photo{
+  overflow:hidden !important;
+}
+.hero-photo img,
+.about-photo img{
+  transform:scale(1) !important;
+  transition:transform .7s cubic-bezier(.16,1,.3,1) !important;
+  transform-origin:center center !important;
+}
+.hero-photo:hover img,
+.about-photo:hover img{
+  transform:scale(1.075) !important;
+}
+
+@media(max-width:900px){
+ .issue-grid .issue.in-view,.issue-grid .issue.touch-active,
+ .service-grid .service.in-view,.service-grid .service.touch-active{
+   transform:translateY(-7px) !important;
+   box-shadow:0 18px 34px rgba(0,0,0,.10);
+ }
+ .hero-photo.in-view img,.hero-photo.touch-active img,
+ .about-photo.in-view img,.about-photo.touch-active img{
+   transform:scale(1.045) !important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .issue-grid .issue,.service-grid .service,
+ .issue-grid .issue::after,.service-grid .service::before,
+ .hero-photo img,.about-photo img{transition:none!important}
+}
 </style>
 </head>
 
@@ -411,6 +519,7 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
 
 <section id="problema" class="container section">
  <div class="problem-head">
+  <div class="kicker">A probléma</div>
   <div>
    <h2>A megfelelő embert egyre nehezebb megtalálni…</h2>
    <p class="copy" style="margin-top:25px">A HR csapat munkája sokrétű és komoly felelősséggel jár. A munkatársak támogatása, a megfelelő munkakörülmények biztosítása, a meglévő csapat megtartása és a vállalat működésének támogatása mind a HR fontos feladatai. Éppen ezért a toborzás teljes folyamatának átvétele valódi segítséget jelenthet a szervezet számára.</p>
@@ -428,7 +537,7 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
   <div class="problem-copy">
    <h3>A gyártó- és ipari vállalatok pontosan tudják, milyen problémát okoz, ha egy fontos pozíció hónapokig betöltetlen marad.</h3>
    <p class="copy">A szakemberhiány mellett a magas fluktuáció is komoly kihívást jelent: egy új munkatárs akár néhány hónap után továbbállhat, miközben a vállalat jelentős időt és energiát fektetett a kiválasztásába és betanításába.</p>
-   <p class="copy" style="margin-top:20px">Egy rosszul betöltött pozíció nemcsak HR probléma, hanem közvetlenül hat a működésre, határidőkre, emberi forrás gazdálkodásra.</p>
+   <p class="copy" style="margin-top:20px">Egy rosszul betöltött pozíció nemcsak HR probléma, hanem közvetlenül hat a működésre, határidőkre, emberi erőforrás gazdálkodásra.</p>
    <div class="issue-grid" style="margin-top:28px">
     <div class="issue"><strong>Betöltetlen pozíció</strong><span>Elhúzódó keresés és működési nehézségek.</span></div>
     <div class="issue"><strong>Fluktuáció</strong><span>Újrakezdett kiválasztási és betanítási folyamatok.</span></div>
@@ -468,14 +577,9 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
 
  <div class="service-grid">
   <div class="service"><h3>Célzott jelöltkutatás</h3><p>Releváns profilok felkutatása saját, naprakész adatbázisból.</p></div>
-  <div class="service"><h3>Adatbázis-alapú megszólítás</h3><p>Közvetlen megkeresés egy vonzó ajánlattal</p></div>
+  <div class="service"><h3>Adatbázis-alapú megszólítás</h3><p>Közvetlen megkeresés egy vonzó ajánlattal.</p></div>
   <div class="service"><h3>Előszűrés</h3><p>Telefonos interjúk a jelöltek azonosítására.</p></div>
   <div class="service"><h3>Teljes folyamat</h3><p>Az interjúk szervezésétől a visszajelzéseken át egészen a sikeres belépésig.</p></div>
- </div>
-
- <div class="background-note">
-  <div class="kicker">Szakmai háttér</div>
-  <p class="copy">Frissen végzett közgazdászként és vállalati tanácsadóként egy nemzetközi hátterű, a magyar piacon is régóta meghatározó HR szolgáltatónál kezdtem a pályafutásomat. Az egyik legnagyobb szakmai kihívásom és egyben fontos eredményem volt a kékgalléros toborzási csapat vezetése. Ezalatt rengeteget tanultam a fizikai munkaerőpiacról, a gyártóvállalatok igényeiről és arról, hogyan lehet a megfelelő szakembereket megtalálni egy folyamatosan változó piacon. Ezt a tapasztalatot ma saját a recruitment csapatom építésében és fejlesztésében hasznosítom. A fizikai és technikai pozíciók mellett jelenleg HR-tanácsadás és fejvadászat területén is együtt dolgozom a hazai piac kiemelkedő szereplőivel.</p>
  </div>
 </section>
 
@@ -544,6 +648,8 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
     <a class="btn" href="#contactForm">KÉREK EGY KONZULTÁCIÓT <span>→</span></a>
    </div>
    <div class="contact-card">
+    <small>Tóvizi Levente</small>
+    <strong>Recruitment szakértő</strong>
     <div>Gyártás. Ipar. Fizikai állomány.<br>Célzott recruitment.</div>
    </div>
   </div>
@@ -565,16 +671,32 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
 
 </main>
 
-<footer><div class="container footer-inner"><div class="footer-brand"><img class="footer-logo" src="TR_Logo_Black.png" alt="Tóvizi Recruitment"><span>Gyártás · Ipar · Fizikai állomány</span></div></div>
- <div class="container footer">
-  <img src="TR_Logo_Black.png" alt="Tóvizi Recruitment">
-  <small>© 2026 Tóvizi Recruitment</small>
- </div>
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img class="footer-logo" src="TR_Logo_Black.png" alt="Tóvizi Recruitment">
+      <span>Gyártás · Ipar · Fizikai állomány</span>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-label">Helyszín</div>
+      <div>Budapest, Hungary</div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-label">LinkedIn</div>
+      <a href="https://www.linkedin.com/in/leventetovizi/" target="_blank" rel="noopener noreferrer">linkedin.com/in/leventetovizi/ ↗</a>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-label">Kapcsolat</div>
+      <a href="mailto:levente@tovizirecruitment.com">✉ levente@tovizirecruitment.com</a>
+      <a href="tel:+36209623682">☎ +36-20-962-3682</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">© Tóvizi Recruitment</div>
 </footer>
 
 <script id="restored-original-interaction-script">
 (function(){
-  const logoLink=document.querySelector('header.nav > a:first-child');
+  const logoLink=document.querySelector('.nav > a:first-child');
   if(logoLink){
     const logo=logoLink.querySelector('.logo');
     if(logo){
@@ -588,7 +710,7 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
   }
 
   const dynamicSelectors=[
-    '.method-card','.target-card','.problem-card','.issue','.service','.timeline-item',
+    '.issue-grid .issue','.service-grid .service','.method-card','.target-card','.problem-card','.timeline-item',
     '.guarantee-box','.guarantee-card','.guarantee-item','.step',
     '.stats .stat','.hero-photo','.about-photo','.hero-image','.expert-image'
   ];
@@ -636,6 +758,15 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
     },{threshold:.3});
     observer.observe(section);
   }else animateCounters();
+})();
+</script>
+
+
+<script id="final-form-script">
+(function(){
+  const form=document.getElementById('contactForm');
+  const thanks=document.getElementById('thanks');
+  if(form&&thanks){form.addEventListener('submit',function(e){e.preventDefault();thanks.hidden=false;});}
 })();
 </script>
 </body>

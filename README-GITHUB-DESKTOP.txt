@@ -1,13 +1,13 @@
-TÓVIZI RECRUITMENT — VÉGLEGES PDF SZÖVEGFRISSÍTÉS
+TÓVIZI RECRUITMENT — FINAL QA
 
-Ez a csomag a korábban működő weboldal eredeti vizuális/dinamikus rendszerére épül.
-A PDF-ben kért szöveges változtatások kerültek át, a működő functions/[[path]].js backend változatlan.
+A PDF-tartalom mellett az interakciók külön QA-javítva:
+- Betöltetlen pozíció / Fluktuáció / HR-terhelés: hover + mobile in-view/touch
+- Célzott jelöltkutatás / Adatbázis-alapú megszólítás / Előszűrés / Teljes folyamat: hover + mobile in-view/touch
+- Hero fotó: mouse hover zoom + mobile in-view/touch zoom
+- Levente fotó: mouse hover zoom + mobile in-view/touch zoom
+- method/problem/timeline/guarantee/stats: hover + mobile states
+- footer logo és eredeti footer struktúra
+- counter + logo animation
+- teljes functions/[[path]].js + schema + képek
 
-GitHub Desktop:
-1. A meglévő Tovizi-recruitment repositoryban cseréld le az index.html-t erre a fájlra.
-2. A functions/[[path]].js fájlt NE módosítsd, ha a repóban már a működő verzió van.
-3. A schema.sql és képfájlok maradjanak változatlanok.
-4. Changes ellenőrzése után Commit to main -> Push origin.
-5. Cloudflare Pages automatikusan deployol.
-
-Fontos: ez nem újratervezett oldal. Az eredeti működő oldalból indult, és a PDF szöveges kérései kerültek rá.
+A projektet egyben kell használni.
