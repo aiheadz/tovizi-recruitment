@@ -1,20 +1,19 @@
-TÓVIZI RECRUITMENT – PDF TEXT ONLY FINAL
+Tóvizi Recruitment – PDF text + layout fix + admin restore
 
-Ez a csomag az általad feltöltött 1440 soros index.html alapján készült.
-A meglévő oldal szerkezetét, CSS-ét, JavaScriptjét és képeit nem építettem újra.
+Ez a csomag az előző, jó PDF TEXT ONLY index.html-re épül.
 
-Módosítva kizárólag a PDF-ben kért tartalom:
-- HIRDETÉS ÉS VÁRAKOZÁS → KERESÉS ÉS MEGSZÓLÍTÁS
-- PDF-ben kért problémablokkok és szolgáltatási szövegek ellenőrzése
-- Meta/TikTok elem nincs benne
-- szerkesztési megjegyzések (FOTÓ, Töröljük..., Probléma - törlés, jogi megjegyzés) nincsenek benne
-- szakmai háttér a PDF szerint kétszer szerepel, az eredeti helyén és a stratégiai részben
-- 10 pontos folyamat és garanciák ellenőrizve
+Csak a kért javítások történtek:
+1. A négy recruitment elem 4 oszlopos elrendezést kapott, így nem marad üres ötödik négyzet.
+2. A „A megfelelő embert egyre nehezebb megtalálni…” blokk címe és a HR-szöveg rendezettebb, kétoszlopos pozíciót kapott; mobilon egymás alá törik.
+3. Visszakerült a működő Cloudflare Pages Functions admin + személyre szabott link rendszer.
 
-Telepítés:
-1. A GitHub Desktopban a repository eredeti index.html fájlját cseréld erre.
-2. Más fájlt ne cserélj.
-3. A Changes nézetben csak az index.html legyen módosult.
-4. Commit.
-5. Push origin.
-6. Cloudflare Pages deploy után ellenőrizd a live oldalt.
+A backend:
+- /admin admin felület
+- üzenetek kezelése
+- személyre szabott 6 számjegyű link generátor
+- link másolása közvetlenül generálás után
+- személyre szabott név a landing oldalon
+- /api/* és /123456 útvonalak
+
+A D1 binding neve: DB
+A szükséges Secrets: ADMIN_PASSWORD, ADMIN_SESSION_SECRET

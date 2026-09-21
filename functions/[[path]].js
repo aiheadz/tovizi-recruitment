@@ -119,7 +119,7 @@ async function personalizedPage(request, env, code) {
   const greeting = `<div class="personal-greeting"><span>Levente</span></div>`;
   const first = row.first_name.replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   const block = `<div class="personal-greeting"><span>${first},</span><strong>nézzük meg, hogyan segíthetünk.</strong></div>`;
-  const css = `<style>.personal-greeting{display:flex;flex-direction:column;gap:2px;margin:0 0 22px;font-family:Manrope,Arial,sans-serif;line-height:1.04;letter-spacing:-.025em}.personal-greeting span{font-size:clamp(30px,4vw,52px);font-weight:800;color:#7ea914}.personal-greeting strong{font-size:clamp(25px,3vw,40px);font-weight:500;color:#111315}.hero.has-personal{align-items:center}@media(max-width:760px){.personal-greeting{margin-bottom:18px}}</style>`;
+  const css = `<style>.personal-greeting{display:flex;flex-direction:column;gap:2px;margin:0 0 22px;font-family:Manrope,Arial,sans-serif;line-height:1.04;letter-spacing:-.025em}.personal-greeting span{font-size:clamp(30px,4vw,52px);font-weight:800;color:#b8ff3d}.personal-greeting strong{font-size:clamp(25px,3vw,40px);font-weight:500;color:#111315}.hero.has-personal{align-items:center}@media(max-width:760px){.personal-greeting{margin-bottom:18px}}</style>`;
   html = html.replace('<div class="eyebrow">Célzott recruitment</div>', block + '<div class="eyebrow">Célzott recruitment</div>');
   html = html.replace('</head>', css + '</head>');
   html = html.replace('</body>', `<script>window.__TR_PERSONALIZED__=true;window.__TR_CODE__='${code}';</script></body>`);
