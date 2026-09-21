@@ -1,8 +1,29 @@
-TÓVIZI RECRUITMENT — CORRECTED V2
+TÓVIZI RECRUITMENT — FINAL / ORIGINAL DYNAMICS
 
-Ez a verzió a PDF-tartalmat tartalmazza, és visszaállítja az eredeti dinamikus
-interakciókat: hover, viewport/in-view, touch, képnagyítás, card-mozgások,
-footer hover és a meglévő counter/logo animációk.
+Alap: az eredeti Tóvizi oldal dinamikus rendszere.
+Tartalmi alap: a PDF 6 oldalának kérései.
 
-A teljes projektfájlokat tartalmazza.
-GitHub Desktop: a meglévő repo teljes tartalmával cseréld, majd Changes -> Commit -> Push.
+A meglévő dinamikus rétegek megőrzése:
+- hero / about photo zoom
+- card hover
+- steps hover
+- timeline hover
+- stats hover
+- guarantee hover
+- IntersectionObserver / in-view
+- mobile touch states
+- counter animation
+- header logo animation
+- footer hover
+- footer logo
+- section depth / grid layers
+
+Teljes projekt:
+index.html
+functions/[[path]].js
+schema.sql
+TR_Logo_Black.png
+TR_Logo_Header.png
+Levente-portrait-2.jpg
+
+GitHub Desktop: a teljes projektet használd; Commit to main -> Push origin.
