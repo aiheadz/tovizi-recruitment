@@ -1,29 +1,13 @@
-TÓVIZI RECRUITMENT — FINAL / ORIGINAL DYNAMICS
+TÓVIZI RECRUITMENT — VÉGLEGES PDF SZÖVEGFRISSÍTÉS
 
-Alap: az eredeti Tóvizi oldal dinamikus rendszere.
-Tartalmi alap: a PDF 6 oldalának kérései.
+Ez a csomag a korábban működő weboldal eredeti vizuális/dinamikus rendszerére épül.
+A PDF-ben kért szöveges változtatások kerültek át, a működő functions/[[path]].js backend változatlan.
 
-A meglévő dinamikus rétegek megőrzése:
-- hero / about photo zoom
-- card hover
-- steps hover
-- timeline hover
-- stats hover
-- guarantee hover
-- IntersectionObserver / in-view
-- mobile touch states
-- counter animation
-- header logo animation
-- footer hover
-- footer logo
-- section depth / grid layers
+GitHub Desktop:
+1. A meglévő Tovizi-recruitment repositoryban cseréld le az index.html-t erre a fájlra.
+2. A functions/[[path]].js fájlt NE módosítsd, ha a repóban már a működő verzió van.
+3. A schema.sql és képfájlok maradjanak változatlanok.
+4. Changes ellenőrzése után Commit to main -> Push origin.
+5. Cloudflare Pages automatikusan deployol.
 
-Teljes projekt:
-index.html
-functions/[[path]].js
-schema.sql
-TR_Logo_Black.png
-TR_Logo_Header.png
-Levente-portrait-2.jpg
-
-GitHub Desktop: a teljes projektet használd; Commit to main -> Push origin.
+Fontos: ez nem újratervezett oldal. Az eredeti működő oldalból indult, és a PDF szöveges kérései kerültek rá.

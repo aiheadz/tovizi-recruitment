@@ -360,6 +360,22 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{transition:none!important;animation:none!important}
 }
+<style id="pdf-text-only-polish">
+.background-note{margin-top:56px;max-width:900px}
+.background-note .kicker{margin-bottom:14px}
+@media(max-width:650px){.background-note{margin-top:42px}}
+</style>
+<style id="final-real-card-interactions">
+.issue,.service{position:relative;overflow:hidden;transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,border-color .35s ease}
+.issue:hover,.service:hover{transform:translateY(-6px);box-shadow:0 16px 30px rgba(0,0,0,.09);z-index:2}
+.issue::before,.service::before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:#b8ff3d;transform:scaleY(0);transform-origin:bottom;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.issue:hover::before,.service:hover::before{transform:scaleY(1)}
+.issue strong,.issue span,.service h3,.service p{position:relative;transition:transform .35s ease}
+.issue:hover strong,.issue:hover span,.service:hover h3,.service:hover p{transform:translateX(5px)}
+@media(max-width:900px){.issue.in-view,.issue.touch-active,.service.in-view,.service.touch-active{transform:translateY(-6px);box-shadow:0 18px 38px rgba(17,19,21,.10)}
+.hero-photo.in-view img,.about-photo.in-view img,.hero-photo.touch-active img,.about-photo.touch-active img{transform:scale(1.045)}}
+@media(prefers-reduced-motion:reduce){.issue,.service,.issue::before,.service::before,.issue strong,.issue span,.service h3,.service p{transition:none}.issue:hover,.service:hover{transform:none}}
+</style>
 </style>
 </head>
 
@@ -395,7 +411,6 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
 
 <section id="problema" class="container section">
  <div class="problem-head">
-  <div class="kicker">A probléma</div>
   <div>
    <h2>A megfelelő embert egyre nehezebb megtalálni…</h2>
    <p class="copy" style="margin-top:25px">A HR csapat munkája sokrétű és komoly felelősséggel jár. A munkatársak támogatása, a megfelelő munkakörülmények biztosítása, a meglévő csapat megtartása és a vállalat működésének támogatása mind a HR fontos feladatai. Éppen ezért a toborzás teljes folyamatának átvétele valódi segítséget jelenthet a szervezet számára.</p>
@@ -413,7 +428,7 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
   <div class="problem-copy">
    <h3>A gyártó- és ipari vállalatok pontosan tudják, milyen problémát okoz, ha egy fontos pozíció hónapokig betöltetlen marad.</h3>
    <p class="copy">A szakemberhiány mellett a magas fluktuáció is komoly kihívást jelent: egy új munkatárs akár néhány hónap után továbbállhat, miközben a vállalat jelentős időt és energiát fektetett a kiválasztásába és betanításába.</p>
-   <p class="copy" style="margin-top:20px">Egy rosszul betöltött pozíció nemcsak HR probléma, hanem közvetlenül hat a működésre, határidőkre, emberi erőforrás gazdálkodásra.</p>
+   <p class="copy" style="margin-top:20px">Egy rosszul betöltött pozíció nemcsak HR probléma, hanem közvetlenül hat a működésre, határidőkre, emberi forrás gazdálkodásra.</p>
    <div class="issue-grid" style="margin-top:28px">
     <div class="issue"><strong>Betöltetlen pozíció</strong><span>Elhúzódó keresés és működési nehézségek.</span></div>
     <div class="issue"><strong>Fluktuáció</strong><span>Újrakezdett kiválasztási és betanítási folyamatok.</span></div>
@@ -452,10 +467,15 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
  </div>
 
  <div class="service-grid">
-  <div class="service"><div class="service-no">01</div><h3>Célzott jelöltkutatás</h3><p>Releváns profilok felkutatása saját, naprakész adatbázisból.</p></div>
-  <div class="service"><div class="service-no">02</div><h3>Adatbázis-alapú megszólítás</h3><p>Közvetlen megkeresés egy vonzó ajánlattal.</p></div>
-  <div class="service"><div class="service-no">03</div><h3>Előszűrés</h3><p>Telefonos interjúk a jelöltek azonosítására.</p></div>
-  <div class="service"><div class="service-no">04</div><h3>Teljes folyamat</h3><p>Az interjúk szervezésétől a visszajelzéseken át egészen a sikeres belépésig.</p></div>
+  <div class="service"><h3>Célzott jelöltkutatás</h3><p>Releváns profilok felkutatása saját, naprakész adatbázisból.</p></div>
+  <div class="service"><h3>Adatbázis-alapú megszólítás</h3><p>Közvetlen megkeresés egy vonzó ajánlattal</p></div>
+  <div class="service"><h3>Előszűrés</h3><p>Telefonos interjúk a jelöltek azonosítására.</p></div>
+  <div class="service"><h3>Teljes folyamat</h3><p>Az interjúk szervezésétől a visszajelzéseken át egészen a sikeres belépésig.</p></div>
+ </div>
+
+ <div class="background-note">
+  <div class="kicker">Szakmai háttér</div>
+  <p class="copy">Frissen végzett közgazdászként és vállalati tanácsadóként egy nemzetközi hátterű, a magyar piacon is régóta meghatározó HR szolgáltatónál kezdtem a pályafutásomat. Az egyik legnagyobb szakmai kihívásom és egyben fontos eredményem volt a kékgalléros toborzási csapat vezetése. Ezalatt rengeteget tanultam a fizikai munkaerőpiacról, a gyártóvállalatok igényeiről és arról, hogyan lehet a megfelelő szakembereket megtalálni egy folyamatosan változó piacon. Ezt a tapasztalatot ma saját a recruitment csapatom építésében és fejlesztésében hasznosítom. A fizikai és technikai pozíciók mellett jelenleg HR-tanácsadás és fejvadászat területén is együtt dolgozom a hazai piac kiemelkedő szereplőivel.</p>
  </div>
 </section>
 
@@ -504,9 +524,9 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
   </div>
   <div>
    <div class="guarantees">
-    <div class="guarantee-box"><strong>1</strong><span>HÓNAP<br>BETANÍTOTT MUNKAKÖRÖK</span></div>
-    <div class="guarantee-box"><strong>2</strong><span>HÓNAP<br>SZAKMUNKÁS ÉS SZAKKÉPZETT POZÍCIÓK</span></div>
-    <div class="guarantee-box"><strong>3</strong><span>HÓNAP<br>MŰSZAK- ÉS TERÜLETVEZETŐI POZÍCIÓK</span></div>
+    <div class="guarantee-box"><strong class="counter" data-target="1">0</strong><span>HÓNAP<br>BETANÍTOTT MUNKAKÖRÖK</span></div>
+    <div class="guarantee-box"><strong class="counter" data-target="2">0</strong><span>HÓNAP<br>SZAKMUNKÁS ÉS SZAKKÉPZETT POZÍCIÓK</span></div>
+    <div class="guarantee-box"><strong class="counter" data-target="3">0</strong><span>HÓNAP<br>MŰSZAK- ÉS TERÜLETVEZETŐI POZÍCIÓK</span></div>
    </div>
    
   </div>
@@ -524,8 +544,6 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
     <a class="btn" href="#contactForm">KÉREK EGY KONZULTÁCIÓT <span>→</span></a>
    </div>
    <div class="contact-card">
-    <small>Tóvizi Levente</small>
-    <strong>Recruitment szakértő</strong>
     <div>Gyártás. Ipar. Fizikai állomány.<br>Célzott recruitment.</div>
    </div>
   </div>
@@ -570,7 +588,7 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
   }
 
   const dynamicSelectors=[
-    '.method-card','.target-card','.problem-card','.timeline-item',
+    '.method-card','.target-card','.problem-card','.issue','.service','.timeline-item',
     '.guarantee-box','.guarantee-card','.guarantee-item','.step',
     '.stats .stat','.hero-photo','.about-photo','.hero-image','.expert-image'
   ];
