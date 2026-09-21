@@ -2,1056 +2,207 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tóvizi Recruitment — Célzott recruitment gyártó- és ipari vállalatoknak</title>
-<meta name="description" content="Célzott recruitment szakmunkások, operátorok és technikusok számára. Jelöltkutatás, megszólítás, előszűrés és teljes kiválasztási folyamat egy kézben.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tóvizi Recruitment | Célzott recruitment gyártó- és ipari vállalatoknak</title>
+<meta name="description" content="Célzott recruitment gyártó- és ipari vállalatoknak. Szakmunkások, operátorok, technikusok és fizikai állomány célzott felkutatása, megszólítása, előszűrése és a teljes kiválasztási folyamat átvétele.">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
 :root{
-  --ink:#111315;
-  --muted:#62686d;
-  --paper:#f7f7f4;
+  --ink:#171b1d;
+  --muted:#687074;
+  --line:#dde2e2;
+  --soft:#f3f5f4;
+  --accent:#83b83f;
+  --accent-dark:#5f8f27;
+  --dark:#202628;
   --white:#fff;
-  --line:#dedfda;
-  --accent:#b8ff3d;
-  --accent-dark:#7ea914;
-  --max:1240px;
+  --max:1180px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}
+body{margin:0;color:var(--ink);font-family:"DM Sans",Arial,sans-serif;background:#fff;line-height:1.55}
 img{max-width:100%;display:block}
-.container{width:min(calc(100% - 48px),var(--max));margin:auto}
-.nav{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(17,19,21,.10)}
-.logo{width:205px;height:auto}
-.navlinks{display:flex;gap:34px;align-items:center;font-size:14px;font-weight:600}
-.navlinks a{opacity:.72;transition:.2s}.navlinks a:hover{opacity:1}
-.navcta{padding:12px 18px;border:1px solid var(--ink);border-radius:999px}
- .hero{min-height:calc(100vh - 86px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;padding:70px 0 80px;overflow:hidden;background:var(--paper)}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:24px;color:#777}
-.eyebrow:before{content:"";width:28px;height:3px;background:var(--accent);display:block}
-h1,h2,h3{font-family:"Manrope",Arial,sans-serif;margin:0;line-height:1.05;letter-spacing:-.035em}
-h1{font-size:clamp(48px,6vw,86px);max-width:850px}
+a{text-decoration:none;color:inherit}
+.container{width:min(var(--max),calc(100% - 48px));margin:auto}
+.section{padding:100px 0}
+.kicker,.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--accent-dark);margin-bottom:18px}
+h1,h2,h3{font-family:"Manrope",Arial,sans-serif;line-height:1.08;margin:0;letter-spacing:-.035em}
+h1{font-size:clamp(48px,6.2vw,82px);max-width:850px}
 h1 span{display:block}
-.highlight{position:relative;display:inline}
-.highlight:after{content:"";position:absolute;left:0;right:0;bottom:2px;height:14px;background:var(--accent);z-index:-1}
-.hero .lead{font-size:20px;line-height:1.55;max-width:680px;color:#444a4f;margin:30px 0}
-.hero .btn{background:var(--ink);color:#fff}
-.hero-photo{position:relative;min-height:590px;display:flex;align-items:flex-end;justify-content:flex-end}
-.hero-photo img{position:relative;z-index:1;width:min(100%,590px);height:610px;object-fit:cover;object-position:center top;mix-blend-mode:multiply;border-radius:0 0 0 120px}
-.hero-note{position:absolute;z-index:2;left:0;bottom:28px;background:var(--white);padding:18px 22px;border-left:5px solid var(--accent);box-shadow:0 18px 50px rgba(0,0,0,.10);max-width:270px}
-.hero-note strong{display:block;font-family:"Manrope";font-size:18px;line-height:1.15;letter-spacing:-.02em;color:var(--ink)}
-.hero-note small{display:block;color:var(--muted);margin-top:4px}
-.band{background:var(--ink);color:#fff;padding:26px 0}
-.band-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
-.band strong{font-family:"Manrope";font-size:22px}
-.band span{color:#aeb4b7;font-size:14px}
-.section{padding:120px 0}
-.section-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;margin-bottom:65px}
-.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#777}
-h2{font-size:clamp(38px,5vw,66px)}
-.copy{font-size:18px;color:#555b60;max-width:720px}
-.problem{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch}
-.problem-visual{background:#111315;color:#fff;padding:44px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;min-height:0}
-.problem-visual:before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:-180px;top:-150px;background:radial-gradient(circle,rgba(184,255,61,.18),rgba(184,255,61,0) 68%)}
-.problem-visual-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#aeb4b7;font-weight:700;position:relative}
-.problem-visual-title{font-family:"Manrope";font-weight:800;font-size:clamp(38px,3.7vw,58px);line-height:.98;letter-spacing:-.04em;margin-top:20px;position:relative}.problem-visual-title span{color:var(--accent)}
-.problem-visual-line{height:4px;width:70px;background:var(--accent);margin:26px 0 16px;position:relative}.problem-visual p{color:#b8bec1;max-width:470px;position:relative;margin:0}
-.problem-copy{display:flex;flex-direction:column;justify-content:center}
-.problem-copy h3{font-size:clamp(28px,2.5vw,38px);line-height:1.08;margin-bottom:18px}
-.problem-copy .copy{max-width:620px}
+h1 .highlight{color:var(--accent)}
+h2{font-size:clamp(36px,4.4vw,58px)}
+h3{font-size:23px}
+p{margin:0}
+.copy{font-size:17px;color:var(--muted);max-width:760px}
+.btn{display:inline-flex;align-items:center;gap:18px;background:var(--accent);color:#fff;padding:16px 22px;font-weight:800;letter-spacing:.02em;border-radius:2px;transition:.2s}
+.btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:20}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+.logo{height:46px;width:auto}
+.navlinks{display:flex;gap:30px;font-size:14px;font-weight:700;color:#444}
+.navlinks a:hover{color:var(--accent-dark)}
 
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:42px}
-.stat{background:var(--paper);padding:28px}.stat b{display:block;font-family:"Manrope";font-size:22px;margin-bottom:8px}.stat p{margin:0;color:var(--muted);font-size:14px}
-.dark{background:var(--ink);color:#fff}.dark .copy{color:#b9bfc2}.dark .kicker{color:#8f969a}
-.method{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.section-brand{width:150px;height:auto;margin-bottom:34px;filter:invert(1);opacity:.92}
-.method-card{background:#1b1e20;border:1px solid #2c3032;padding:42px}
-.method-card .big{font-family:"Manrope";font-size:clamp(40px,5vw,70px);font-weight:800;line-height:.95}
-.method-card .arrow{color:var(--accent);font-size:42px;margin:20px 0}
-.method-card .sub{color:#9fa5a8}
-.method-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
-.method-card .big,.method-card .arrow,.method-card .sub{transition:transform .45s ease,opacity .35s ease}
-.method-card:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.28);border-color:rgba(184,255,61,.45)}
-.method-card:hover .big:first-child{transform:translateX(-8px);opacity:.62}
-.method-card:hover .arrow{transform:translateY(7px) rotate(90deg)}
-.method-card:hover .big:nth-of-type(2){transform:translateX(8px) scale(1.04)}
-.method-card:hover .sub{transform:translateY(4px);opacity:1}
-@media (prefers-reduced-motion:reduce){.method-card,.method-card .big,.method-card .arrow,.method-card .sub{transition:none}}
+.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center;padding-top:86px;padding-bottom:92px}
+.hero .lead{font-size:21px;line-height:1.5;color:#4f575a;max-width:760px;margin:28px 0 20px}
+.hero-support{font-size:17px;line-height:1.55;max-width:730px;color:var(--muted);margin-bottom:22px}
+.hero-claim{font-family:"Manrope";font-size:21px;line-height:1.3;margin:0 0 30px}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:grayscale(100%)}
+.hero-note{position:absolute;left:0;bottom:0;background:var(--accent);color:#fff;padding:18px 22px;max-width:310px}
+.hero-note strong{display:block;font-family:"Manrope";font-size:15px}
+.hero-note small{display:block;margin-top:3px;font-size:13px}
 
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.step{background:var(--paper);padding:28px 22px;min-height:220px;position:relative;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
-.step-no{font-family:"Manrope";font-size:12px;font-weight:800;color:#7a8084;display:inline-block;transition:transform .35s ease,color .35s ease}
-.step h3{font-size:19px;margin:24px 0 10px;transition:transform .35s ease}
-.step p{font-size:14px;color:var(--muted);margin:0;transition:transform .35s ease,color .35s ease}
-.step:after{content:"";position:absolute;left:0;bottom:0;width:0;height:3px;background:var(--accent);transition:width .4s ease}
-.step:hover{transform:translateY(-8px);box-shadow:0 20px 42px rgba(17,19,21,.13);border-color:rgba(17,19,21,.12)}
-.step:hover:after{width:100%}
-.step:hover .step-no{transform:translateY(-4px) scale(1.08);color:var(--accent-dark)}
-.step:hover h3{transform:translateX(5px)}
-.step:hover p{transform:translateX(5px);color:#41474b}
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
-.about-photo{position:relative;background:#eee;min-height:620px}
-.about-photo img{width:100%;height:620px;object-fit:cover;object-position:center 18%;}
-.about-photo .label{position:absolute;bottom:0;left:0;background:var(--accent);padding:16px 22px;font-family:"Manrope";font-weight:800}
-.clients{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.pill{border:1px solid #cfd1cc;padding:10px 14px;border-radius:999px;font-size:13px;background:#fff}
-.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.timeline-item{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:22px;background:#fff;border:1px solid #e1e2dd}
-.timeline-no{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:"Manrope";font-weight:800;transition:transform .35s ease,background .35s ease,color .35s ease}
-.timeline h3{font-size:18px;margin-bottom:6px;transition:transform .35s ease}.timeline p{margin:0;color:var(--muted);font-size:14px;transition:transform .35s ease}
-.timeline-item{position:relative;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
-.timeline-item:after{content:"";position:absolute;left:0;bottom:0;width:0;height:3px;background:var(--accent);transition:width .4s ease}
-.timeline-item:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(17,19,21,.10);border-color:#cfd1cc}
-.timeline-item:hover:after{width:100%}
-.timeline-item:hover .timeline-no{transform:scale(1.1) rotate(6deg);background:var(--accent);color:var(--ink)}
-.timeline-item:hover h3{transform:translateX(5px)}
-.timeline-item:hover p{transform:translateX(5px)}
-.guarantee{background:var(--accent);padding:100px 0}
-.guarantee-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
-.guarantees{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
-.guarantee-box{background:rgba(255,255,255,.72);padding:28px;transition:transform .35s ease,box-shadow .35s ease,background .35s ease}
-.guarantee-box strong{display:block;font-family:"Manrope";font-size:44px;line-height:1}.guarantee-box span{font-size:13px;font-weight:700}
-.guarantee-box:hover{transform:translateY(-7px);box-shadow:0 18px 36px rgba(17,19,21,.12);background:rgba(255,255,255,.92)}
-.final{padding:110px 0;background:var(--paper)}
-.final-inner{display:flex;justify-content:space-between;gap:60px;align-items:end}
-.final h2{max-width:760px}
-.contact-card{background:var(--ink);color:#fff;padding:30px;min-width:320px}
-.contact-card small{color:#9ea5a9;text-transform:uppercase;letter-spacing:.12em}
-.contact-card strong{display:block;font-family:"Manrope";font-size:24px;margin:8px 0 18px}
-footer{background:var(--ink);color:#fff;padding:58px 0 26px}
-.footer-inner{display:grid;grid-template-columns:1.5fr .8fr 1fr 1.35fr;gap:42px;color:#a9afb2;font-size:13px;align-items:start}
-.footer-brand{display:flex;flex-direction:column;gap:16px}
-.footer-logo{width:185px;height:auto;filter:invert(1);opacity:.96}
-.footer-contact{display:flex;flex-direction:column;gap:5px}
-.footer-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#fff;margin-bottom:7px}
-.footer-contact a{color:#a9afb2;transition:color .2s ease}
-.footer-contact a:hover{color:var(--accent)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:42px;padding-top:20px;color:#70777b;font-size:12px}
-@media(max-width:900px){
- .footer-inner{grid-template-columns:1fr 1fr}
- .footer-logo{width:175px}
- .navlinks a:not(.navcta){display:none}
- .hero,.problem,.method,.about,.guarantee-grid,.section-head{grid-template-columns:1fr;gap:40px}
- .hero{padding-top:55px;min-height:calc(100vh - 74px)}
- .hero-photo{min-height:470px}.hero-photo img{height:500px;width:min(100%,560px);border-radius:0 0 0 80px}
- .steps{grid-template-columns:1fr}
- .step{min-height:auto}
- .timeline{grid-template-columns:1fr}
- .guarantees{grid-template-columns:1fr}
- .final-inner,.band-inner,.footer-inner{flex-direction:column;align-items:flex-start}
- .section{padding:80px 0}
- .problem-image,.about-photo img{height:500px;min-height:500px}\n .about-photo{min-height:500px}
-}
-@media(max-width:560px){
- .footer-inner{grid-template-columns:1fr}
- .container{width:min(calc(100% - 30px),var(--max))}
- .nav{height:74px}.logo{width:135px}.navcta{padding:10px 14px;font-size:12px}
- h1{font-size:48px}.lead{font-size:17px}
- .hero-photo{min-height:410px}.hero-photo img{height:440px;border-radius:0 0 0 60px}\n .about-photo{min-height:440px}.about-photo img{height:440px;min-height:440px}
- .stats{grid-template-columns:1fr}
- .method-card{padding:28px}
-}
-</style>
-<style id="problem-cards-hover-final">
-/* Problémakártyák – finom, prémium hover */
-.problem-card {
-  position: relative;
-  overflow: hidden;
-  transition: transform .35s cubic-bezier(.2,.8,.2,1),
-              border-color .35s ease,
-              box-shadow .35s ease;
-}
+.section-head{display:grid;grid-template-columns:.38fr 1fr;gap:70px;margin-bottom:60px}
+.section-head .copy{margin-top:25px}
+.problem{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:stretch}
+.problem-visual{background:var(--dark);color:#fff;padding:48px;min-height:430px;display:flex;flex-direction:column;justify-content:flex-end}
+.problem-visual-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#aab1b3;margin-bottom:auto}
+.problem-visual-title{font-family:"Manrope";font-weight:800;font-size:40px;line-height:1.04;letter-spacing:-.035em}
+.problem-visual-title span{color:var(--accent)}
+.problem-visual-line{width:60px;height:4px;background:var(--accent);margin:26px 0}
+.problem-visual p{color:#c9ced0;max-width:440px}
+.problem-copy h3{font-size:30px;margin-bottom:25px}
+.problem-copy>.copy{margin-bottom:28px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:25px 20px 25px 0}
+.stat+ .stat{border-left:1px solid var(--line);padding-left:20px}
+.stat b{font-family:"Manrope";font-size:17px;display:block;margin-bottom:8px}
+.stat p{font-size:14px;color:var(--muted)}
 
-.problem-card::after {
-  content: "";
-  position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 0;
-  height: 2px;
-  background: #b8ff3d;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform .4s cubic-bezier(.2,.8,.2,1);
-}
+.dark{background:var(--dark);color:#fff}
+.dark .copy{color:#c7ccce}
+.dark .kicker{color:var(--accent)}
+.method{display:grid;grid-template-columns:1.15fr .85fr;gap:90px;align-items:center}
+.section-brand{width:190px;margin-bottom:40px;filter:brightness(0) invert(1)}
+.method-subhead{font-family:"Manrope";font-size:clamp(25px,3vw,37px);font-weight:800;line-height:1.12;margin:26px 0 22px;color:#fff}
+.method .copy{margin-top:18px}
+.method-card{border:1px solid #4b5355;padding:50px;min-height:430px;display:flex;flex-direction:column;justify-content:center}
+.method-card .big{font-family:"Manrope";font-weight:800;font-size:clamp(30px,4vw,50px);line-height:1.02;letter-spacing:-.04em}
+.method-card .arrow{font-size:50px;color:var(--accent);line-height:1;margin:24px 0}
+.method-card .sub{color:#c7ccce;margin-top:25px;max-width:430px}
 
-.problem-card h3 {
-  transition: transform .35s ease, color .35s ease;
-}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.step{padding:32px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:205px}
+.step-no{display:block;font-family:"Manrope";font-weight:800;color:var(--accent);font-size:14px;margin-bottom:36px}
+.step h3{font-size:21px;margin-bottom:12px}
+.step p{font-size:15px;color:var(--muted)}
 
-.problem-card p {
-  transition: transform .35s ease, opacity .35s ease;
-}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}
+.about-photo{position:relative}
+.expert-portrait{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:grayscale(100%)}
+.about .copy{margin-top:22px}
+.about h2{max-width:760px}
+.about .kicker{margin-bottom:16px}
 
-.problem-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(184,255,61,.38);
-  box-shadow: 0 18px 36px rgba(0,0,0,.09);
-}
+.process{background:var(--soft)}
+.timeline{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.timeline-item{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.timeline-no{font-family:"Manrope";font-size:27px;font-weight:800;color:var(--accent)}
+.timeline-item h3{font-size:20px;margin-bottom:8px}
+.timeline-item p{font-size:15px;color:var(--muted)}
 
-.problem-card:hover::after {
-  transform: scaleX(1);
-}
+.guarantee{background:var(--dark);color:#fff;padding:100px 0}
+.guarantee-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}
+.guarantee .kicker{color:var(--accent)}
+.guarantee .copy{color:#c7ccce;margin-top:25px}
+.guarantees{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.guarantee-box{border:1px solid #4b5355;padding:28px 20px;min-height:170px;display:flex;flex-direction:column;justify-content:center}
+.guarantee-box strong{font-family:"Manrope";font-size:62px;line-height:1;color:var(--accent)}
+.guarantee-box span{font-size:11px;font-weight:800;line-height:1.35;margin-top:12px;color:#d9ddde}
+.guarantee-note{color:#c7ccce;margin-top:20px;font-size:14px}
 
-.problem-card:hover h3 {
-  color: #b8ff3d;
-  transform: translateX(3px);
-}
+.final{padding:105px 0 80px;background:#f4f6f5}
+.final-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:90px;align-items:end}
+.final h2{max-width:800px}
+.final .copy{margin-top:24px;max-width:760px}
+.final .btn{margin-top:30px}
+.contact-card{border-left:4px solid var(--accent);padding:18px 0 18px 28px}
+.contact-card small{display:block;color:var(--muted);font-size:13px;margin-bottom:4px}
+.contact-card strong{display:block;font-family:"Manrope";font-size:25px;margin-bottom:12px}
+footer{background:var(--dark);color:#fff;padding:30px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.footer-inner img{width:170px;filter:brightness(0) invert(1)}
+.footer-inner small{color:#aeb5b7}
 
-.problem-card:hover p {
-  transform: translateX(2px);
-  opacity: .88;
+@media(max-width:950px){
+  .hero,.problem,.method,.about,.guarantee-grid,.final-inner{grid-template-columns:1fr;gap:45px}
+  .section-head{grid-template-columns:1fr;gap:18px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .hero{padding-top:55px}
+  .guarantees{grid-template-columns:1fr 1fr 1fr}
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .problem-card,
-  .problem-card h3,
-  .problem-card p,
-  .problem-card::after {
-    transition: none;
-  }
-  .problem-card:hover {
-    transform: none;
-  }
+@media(max-width:650px){
+  .container{width:min(var(--max),calc(100% - 32px))}
+  .section{padding:70px 0}
+  .nav{height:70px}
+  .logo{height:38px}
+  .navlinks{display:none}
+  h1{font-size:46px}
+  .hero .lead{font-size:18px}
+  .problem-visual{padding:32px;min-height:350px}
+  .problem-visual-title{font-size:34px}
+  .stats,.steps,.timeline,.guarantees{grid-template-columns:1fr}
+  .stat+.stat{border-left:0;border-top:1px solid var(--line);padding-left:0}
+  .method-card{padding:32px}
+  .guarantee-box{min-height:140px}
+  .final-inner{gap:45px}
+  .footer-inner{align-items:flex-start;flex-direction:column}
 }
 </style>
-
-<style id="photo-zoom-no-frame">
-.hero-photo,
-.about-photo,
-.hero-image,
-.expert-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-photo::after,
-.about-photo::after,
-.hero-image::after,
-.expert-image::after {
-  display: none !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-.hero-photo img,
-.about-photo img,
-.hero-image img,
-.expert-image img {
-  display: block;
-  width: 100%;
-  transform: scale(1);
-  transition: transform .7s cubic-bezier(.16,1,.3,1);
-  transform-origin: center center;
-}
-
-.hero-photo:hover img,
-.about-photo:hover img,
-.hero-image:hover img,
-.expert-image:hover img {
-  transform: scale(1.075);
-}
-</style>
-
-
-<style id="real-stat-hover">
-.stats .stat {
-  position: relative;
-  overflow: hidden;
-  cursor: default;
-  border: 1px solid transparent;
-  transition:
-    transform .38s cubic-bezier(.2,.8,.2,1),
-    border-color .35s ease,
-    box-shadow .38s ease,
-    background-color .35s ease;
-}
-
-.stats .stat::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 3px;
-  height: 100%;
-  background: #b8ff3d;
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform .4s cubic-bezier(.2,.8,.2,1);
-}
-
-.stats .stat b,
-.stats .stat p {
-  position: relative;
-  transition: transform .35s ease, color .35s ease;
-}
-
-.stats .stat:hover {
-  transform: translateY(-6px);
-  border-color: rgba(20,24,28,.16);
-  box-shadow: 0 16px 30px rgba(0,0,0,.09);
-  z-index: 2;
-}
-
-.stats .stat:hover::before {
-  transform: scaleY(1);
-}
-
-.stats .stat:hover b {
-  transform: translateX(6px);
-  color: #16191b;
-}
-
-.stats .stat:hover p {
-  transform: translateX(6px);
-}
-
-@media (max-width: 760px) {
-  .stats .stat:hover {
-    transform: translateY(-4px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .stats .stat,
-  .stats .stat::before,
-  .stats .stat b,
-  .stats .stat p {
-    transition: none;
-  }
-}
-</style>
-
-
-<style id="footer-and-section-polish">
-/* ---------- FOOTER CLEANUP ---------- */
-footer {
-  position: relative;
-  overflow: hidden;
-  padding: 72px 0 28px;
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  width: 520px;
-  height: 520px;
-  right: -260px;
-  top: -300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(184,255,61,.08), rgba(184,255,61,0) 68%);
-  pointer-events: none;
-}
-
-.footer-inner {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(240px, 1.65fr) minmax(150px, .8fr) minmax(190px, 1fr) minmax(240px, 1.25fr);
-  gap: 52px;
-  align-items: start;
-}
-
-.footer-brand {
-  min-width: 0;
-}
-
-.footer-brand > span {
-  display: block;
-  max-width: 230px;
-  line-height: 1.6;
-  color: #8f969a;
-}
-
-.footer-logo {
-  display: block;
-  width: 190px;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 2px;
-}
-
-.footer-contact {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 7px;
-}
-
-.footer-contact a {
-  display: inline-block;
-  max-width: 100%;
-  overflow-wrap: anywhere;
-  line-height: 1.5;
-}
-
-.footer-label {
-  margin-bottom: 6px;
-}
-
-.footer-bottom {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  margin-top: 56px;
-  padding-top: 22px;
-}
-
-.footer-bottom::after {
-  content: "";
-  color: #555c60;
-  font-size: 11px;
-  letter-spacing: .04em;
-}
-
-/* ---------- SUBTLE SECTION BACKGROUNDS ---------- */
-/* Light sections get depth without looking decorative for decoration's sake. */
-.section:not(.dark),
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.section:not(.dark)::before,
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 620px;
-  height: 620px;
-  border-radius: 50%;
-  right: -330px;
-  top: 5%;
-  background: radial-gradient(circle, rgba(184,255,61,.11), rgba(184,255,61,0) 67%);
-  pointer-events: none;
-}
-
-.section:not(.dark)::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(20,24,27,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(20,24,27,.025) 1px, transparent 1px);
-  background-size: 54px 54px;
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.65) 22%, transparent 78%);
-  pointer-events: none;
-}
-
-.section > *,
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Dark methodology section: barely visible technical grid. */
-.dark {
-  position: relative;
-  overflow: hidden;
-}
-
-.dark::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: linear-gradient(135deg, rgba(0,0,0,.75), transparent 75%);
-  pointer-events: none;
-}
-
-.dark > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Final CTA: one oversized soft shape for visual closure. */
-.final {
-  position: relative;
-  overflow: hidden;
-}
-
-.final::after {
-  content: "";
-  position: absolute;
-  width: 560px;
-  height: 560px;
-  right: -240px;
-  bottom: -300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,.55), rgba(255,255,255,0) 70%);
-  pointer-events: none;
-}
-
-.final > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Guarantee section: keep the strong lime field, add a very soft depth layer. */
-.guarantee {
-  position: relative;
-  overflow: hidden;
-}
-
-.guarantee::after {
-  content: "";
-  position: absolute;
-  width: 480px;
-  height: 480px;
-  left: -280px;
-  bottom: -300px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.12);
-  pointer-events: none;
-}
-
-.guarantee > * {
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 1100px) {
-  .footer-inner {
-    grid-template-columns: 1.4fr 1fr 1fr;
-  }
-  .footer-brand {
-    grid-row: span 2;
-  }
-}
-
-@media (max-width: 900px) {
-  .footer-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 34px 42px;
-  }
-  .footer-brand {
-    grid-row: auto;
-  }
-  .footer-logo {
-    width: 180px;
-  }
-  .footer-bottom {
-    margin-top: 44px;
-  }
-}
-
-@media (max-width: 560px) {
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .footer-logo {
-    width: 175px;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 7px;
-  }
-  .footer-bottom::after {
-    content: "";
-  }
-  .section:not(.dark)::before,
-  .hero::before {
-    width: 420px;
-    height: 420px;
-    right: -270px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .footer-contact a {
-    transition: none;
-  }
-}
-</style>
-
-
-<style id="tovizi-final-visual-system">
-/* ===== GLOBAL RHYTHM ===== */
-:root {
-  --tr-lime: #b8ff3d;
-  --tr-ink: #16191b;
-  --tr-muted: #747b80;
-  --tr-line: rgba(22,25,27,.10);
-  --tr-ease: cubic-bezier(.2,.8,.2,1);
-}
-
-/* ===== SECTION TRANSITIONS ===== */
-.section {
-  position: relative;
-}
-
-.section + .section {
-  border-top: 1px solid var(--tr-line);
-}
-
-.section .container,
-.section > .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* subtle corner marker */
-.section:not(.dark)::before {
-  pointer-events: none;
-}
-
-/* ===== UNIFIED CARD INTERACTION ===== */
-.method-card,
-.target-card,
-.problem-card,
-.timeline-item,
-.guarantee-card,
-.guarantee-item {
-  transition:
-    transform .42s var(--tr-ease),
-    box-shadow .42s var(--tr-ease),
-    border-color .32s ease,
-    background-color .32s ease;
-}
-
-.method-card:hover,
-.target-card:hover,
-.problem-card:hover,
-.timeline-item:hover,
-.guarantee-card:hover,
-.guarantee-item:hover {
-  transform: translateY(-6px);
-}
-
-/* keep problem cards particularly crisp */
-.problem-card:hover {
-  box-shadow: 0 18px 34px rgba(0,0,0,.09);
-}
-
-/* ===== END-TO-END NUMBER SYSTEM ===== */
-.timeline-item {
-  position: relative;
-}
-
-.timeline-item::before {
-  content: attr(data-step);
-  position: absolute;
-  right: 22px;
-  top: 18px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  color: rgba(22,25,27,.25);
-  transition: color .3s ease, transform .35s var(--tr-ease);
-}
-
-.timeline-item:hover::before {
-  color: var(--tr-ink);
-  transform: translateX(-3px);
-}
-
-/* ===== TARGET / METHOD ACCENT ===== */
-.method-card:hover h3,
-.target-card:hover h3 {
-  color: var(--tr-lime);
-}
-
-.target-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.target-card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--tr-lime);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .4s var(--tr-ease);
-}
-
-.target-card:hover::after {
-  transform: scaleX(1);
-}
-
-/* ===== GUARANTEE ===== */
-.guarantee-card,
-.guarantee-item {
-  position: relative;
-  overflow: hidden;
-}
-
-.guarantee-card::after,
-.guarantee-item::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 3px;
-  background: rgba(22,25,27,.16);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .4s var(--tr-ease);
-}
-
-.guarantee-card:hover::after,
-.guarantee-item:hover::after {
-  transform: scaleX(1);
-}
-
-/* ===== HERO ===== */
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 170px;
-  right: 7%;
-  bottom: 0;
-  background: linear-gradient(to bottom, transparent, rgba(22,25,27,.12));
-  pointer-events: none;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  border-top: 1px solid rgba(255,255,255,.08);
-}
-
-.footer-contact a {
-  transition: color .25s ease, transform .3s var(--tr-ease);
-}
-
-.footer-contact a:hover {
-  color: var(--tr-lime);
-  transform: translateX(3px);
-}
-
-/* ===== ACCESSIBILITY ===== */
-@media (prefers-reduced-motion: reduce) {
-  .method-card,
-  .target-card,
-  .problem-card,
-  .timeline-item,
-  .guarantee-card,
-  .guarantee-item,
-  .footer-contact a,
-  .timeline-item::before,
-  .target-card::after,
-  .guarantee-card::after,
-  .guarantee-item::after {
-    transition: none !important;
-  }
-}
-</style>
-
-
-<style id="cta-subtle">
-/* CTA – restrained premium treatment */
-.btn,
-.button,
-.cta-button,
-a[class*="cta"] {
-  transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
-}
-
-/* Keep the primary CTA clear, but remove the "loud" effect. */
-.hero .btn,
-.hero .button,
-.final .btn,
-.final .button {
-  box-shadow: none !important;
-  filter: none !important;
-}
-
-.hero .btn:hover,
-.hero .button:hover,
-.final .btn:hover,
-.final .button:hover {
-  transform: translateY(-2px);
-  box-shadow: none !important;
-}
-</style>
-
-
-<style id="cta-final-adjustment">
-/* HERO CTA: larger, solid lime, but still premium */
-.hero .btn,
-.hero .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 58px;
-  padding: 0 30px;
-  background: #b8ff3d !important;
-  color: #16191b !important;
-  border: 1px solid #b8ff3d !important;
-  font-size: 15px;
-  font-weight: 700;
-  box-shadow: none !important;
-}
-
-.hero .btn:hover,
-.hero .button:hover {
-  background: #a9ef35 !important;
-  border-color: #a9ef35 !important;
-  color: #16191b !important;
-  transform: translateY(-2px);
-}
-
-/* TOP-RIGHT "BESZÉLJÜNK": filled, compact lime button */
-nav .btn,
-nav .button,
-.nav .btn,
-.nav .button,
-header .btn,
-header .button {
-  background: #b8ff3d !important;
-  color: #16191b !important;
-  border: 1px solid #b8ff3d !important;
-  box-shadow: none !important;
-}
-
-nav .btn:hover,
-nav .button:hover,
-.nav .btn:hover,
-.nav .button:hover,
-header .btn:hover,
-header .button:hover {
-  background: #a9ef35 !important;
-  border-color: #a9ef35 !important;
-  color: #16191b !important;
-  transform: translateY(-1px);
-}
-</style>
-
-
-
-
-<style id="band-rework">
-.band{padding:30px 0;background:var(--ink);color:#fff}
-.band-inner{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;text-align:center}
-.band-inner strong,.band-inner span{font-family:inherit;font-size:clamp(20px,2.1vw,30px);line-height:1.15;letter-spacing:-.02em}
-.band-inner strong{font-weight:700;color:#b8ff3d}
-.band-inner span{font-weight:500;color:#fff}
-.band-inner span:before{content:"/";display:inline-block;margin-right:24px;color:rgba(255,255,255,.35);font-weight:300}
-@media(max-width:700px){
- .band{padding:24px 0}
- .band-inner{gap:8px;flex-direction:column}
- .band-inner strong,.band-inner span{font-size:21px}
- .band-inner span:before{display:none}
-}
-</style>
-<style id="header-logo-sizing">
-/* Header: compact logo, with nav centered on the logo's vertical midpoint. */
-header.nav{
-  height:108px !important;
-  align-items:center !important;
-  overflow:visible !important;
-}
-header.nav > a:first-child{
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  height:108px;
-  overflow:visible;
-}
-header.nav > a:first-child .logo{
-  width:170px !important;
-  max-width:170px !important;
-  height:auto !important;
-  display:block;
-}
-header.nav .navlinks{
-  align-self:center !important;
-  margin-top:0 !important;
-}
-@media (max-width:900px){
-  header.nav{height:86px !important;}
-  header.nav > a:first-child{height:86px;}
-  header.nav > a:first-child .logo{width:145px !important;max-width:145px !important;}
-}
-@media (max-width:640px){
-  header.nav{height:76px !important;}
-  header.nav > a:first-child{height:76px;}
-  header.nav > a:first-child .logo{width:125px !important;max-width:125px !important;}
-}
-</style>
-
-
-<style id="logo-motion">
-/* Subtle 3D entrance; click replays a clean 360° flip. */
-header.nav > a:first-child{perspective:1000px;}
-header.nav > a:first-child .logo{
-  display:block;
-  transform-style:preserve-3d;
-  backface-visibility:hidden;
-  transform-origin:center center;
-  animation:logoEntrance 850ms cubic-bezier(.16,1,.3,1) both;
-}
-header.nav > a:first-child:hover .logo{filter:brightness(.98);}
-.logo-click-flip{animation:logoFlip 780ms cubic-bezier(.2,.8,.2,1) both !important;}
-@keyframes logoEntrance{
-  0%{opacity:0;transform:perspective(1000px) rotateY(-70deg) translateX(-14px) scale(.9);}
-  70%{opacity:1;transform:perspective(1000px) rotateY(7deg) translateX(2px) scale(1.01);}
-  100%{opacity:1;transform:perspective(1000px) rotateY(0) translateX(0) scale(1);}
-}
-@keyframes logoFlip{
-  0%{transform:perspective(1000px) rotateY(0deg) scale(1);}
-  45%{transform:perspective(1000px) rotateY(190deg) scale(1.04);}
-  100%{transform:perspective(1000px) rotateY(360deg) scale(1);}
-}
-@media (prefers-reduced-motion:reduce){header.nav > a:first-child .logo{animation:none;}.logo-click-flip{animation:none !important;}}
-</style>
-
-
-<style id="logo-final-fix">
-/* FINAL HEADER LOGO — compact, centered, with breathing room above the divider */
-header.nav{
-  height:110px;
-  align-items:center;
-}
-header.nav > a:first-child{
-  display:flex;
-  align-items:center;
-  height:100%;
-  perspective:none;
-}
-header.nav > a:first-child .logo{
-  width:128px !important;
-  height:auto !important;
-  display:block;
-  transform-origin:center center;
-  animation:logoSoftIn 720ms cubic-bezier(.22,.8,.2,1) both !important;
-  backface-visibility:visible !important;
-  filter:none !important;
-}
-header.nav > a:first-child:hover .logo{
-  transform:scale(1.035);
-}
-header.nav > a:first-child .logo.logo-click-flip{
-  animation:logoClick 560ms cubic-bezier(.22,.8,.2,1) both !important;
-}
-@keyframes logoSoftIn{
-  0%{opacity:0;transform:translateY(-8px) scale(.92);}
-  65%{opacity:1;transform:translateY(1px) scale(1.02);}
-  100%{opacity:1;transform:translateY(0) scale(1);}
-}
-@keyframes logoClick{
-  0%{transform:scale(1) rotateZ(0deg);}
-  18%{transform:scale(.94) rotateZ(-4deg);}
-  48%{transform:scale(1.08) rotateZ(3deg);}
-  75%{transform:scale(1.025) rotateZ(-1deg);}
-  100%{transform:scale(1) rotateZ(0deg);}
-}
-@media(max-width:560px){
-  header.nav{height:82px;}
-  header.nav > a:first-child .logo{width:108px !important;}
-}
-@media(prefers-reduced-motion:reduce){
-  header.nav > a:first-child .logo{animation:none !important;}
-  header.nav > a:first-child .logo.logo-click-flip{animation:none !important;}
-}
-</style>
-
-
-<style id="pdf-content-update">
-.hero-support{
-  margin: -8px 0 26px;
-  max-width: 700px;
-  font-size: 17px;
-  line-height: 1.55;
-}
-.method-subhead{
-  color:#fff;
-  font-family:"Manrope",Arial,sans-serif;
-  font-size:clamp(24px,2.5vw,34px);
-  line-height:1.12;
-  font-weight:800;
-  letter-spacing:-.025em;
-  margin:24px 0 18px;
-}
-.steps{
-  grid-template-columns:repeat(4,1fr);
-}
-.steps .step-no{
-  display:none;
-}
-.steps .step h3{
-  margin-top:0;
-}
-@media(max-width:900px){
-  .steps{
-    grid-template-columns:1fr;
-  }
-}
-</style>
-
 </head>
 <body>
 
-<header class="container nav">
-  <a href="#top"><img class="logo" src="TR_Logo_Header.png" alt="Tóvizi Recruitment"></a>
-  <nav class="navlinks">
-    <a href="#modszertan">Módszertan</a>
-    <a href="#folyamat">Folyamat</a>
-    <a href="#levente">Rólam</a>
-    <a class="navcta" href="#kapcsolat">Beszéljünk</a>
-  </nav>
+<header>
+  <div class="container nav">
+    <a href="#top" aria-label="Tóvizi Recruitment">
+      <img class="logo" src="TR_Logo_Header.png" alt="Tóvizi Recruitment">
+    </a>
+    <nav class="navlinks">
+      <a href="#problema">A probléma</a>
+      <a href="#modszertan">A módszer</a>
+      <a href="#folyamat">A folyamat</a>
+      <a href="#levente">Szakmai háttér</a>
+      <a href="#kapcsolat">Kapcsolat</a>
+    </nav>
+  </div>
 </header>
 
 <main id="top">
+
 <section class="container hero">
   <div>
     <div class="eyebrow">Célzott recruitment</div>
-    <h1>Nem várjuk, hogy <span>jelentkezzenek.</span> <span><span class="highlight">Megkeressük őket.</span></span></h1>
-    <p class="lead">Szakmunkást, operátort vagy technikust keres? A szerviz csapatot kell bővíteni? A jó szakemberekért ma már verseny van. Sokuknak van munkája, és nem állásportálokat böngésznek. Mi célzottan megkeressük és megszólítjuk őket, majd a valóban releváns jelölteket eljuttatjuk Önökhöz.</p>
-    <p class="copy hero-support">A gyártó- és ipari vállalatok számára nem egyszerűen álláshirdetéseket készítünk és jelentkezőkre várunk, hanem célzottan felkutatjuk, megszólítjuk és előszűrjük a potenciális munkavállalókat, majd a teljes kiválasztási folyamatot végigvisszük egészen a sikeres belépésig.</p>
-    <a class="btn" href="#kapcsolat">Beszéljünk a nyitott pozíciókról <span>→</span></a>
+    <h1>Nem várjuk, hogy <span>jelentkezzenek.</span><span class="highlight">Keressük meg őket!</span></h1>
+    <p class="lead">Szakmunkást, operátort vagy technikust keres? A szerviz csapatot kell bővíteni?</p>
+    <p class="hero-support">A jó szakemberekért ma már verseny van. Sokuknak van munkája, és nem állásportálokat böngésznek. Mi célzottan megkeressük és megszólítjuk őket, majd a valóban releváns jelölteket eljuttatjuk Önökhöz.</p>
+    <p class="hero-support">A gyártó- és ipari vállalatok számára nem egyszerűen álláshirdetéseket készítünk és jelentkezőkre várunk, hanem célzottan felkutatjuk, megszólítjuk és előszűrjük a potenciális munkavállalókat, majd a teljes kiválasztási folyamatot végigvisszük egészen a sikeres belépésig.</p>
+    <p class="hero-claim">Nem több jelentkezőt hozunk. <strong>A megfelelő embert keressük meg.</strong></p>
+    <a class="btn" href="#kapcsolat">BESZÉLJÜNK A NYITOTT POZÍCIÓKRÓL <span>→</span></a>
   </div>
   <div class="hero-photo">
     <img src="Levente-portrait-2.jpg" alt="Tóvizi Levente">
-    <div class="hero-note"><strong>Gyártás · Ipar · Fizikai állomány</strong><small>Célzott recruitment egy kézben.</small></div>
   </div>
 </section>
 
-<div class="band"><div class="container band-inner"><strong>Nem több jelentkezőt hozunk.</strong><span>A megfelelő embereket keressük meg.</span></div></div>
-
-<section class="container section">
+<section id="problema" class="container section">
   <div class="section-head">
     <div class="kicker">A probléma</div>
     <div>
       <h2>A megfelelő embert egyre nehezebb megtalálni…</h2>
-      <p class="copy">A HR csapat munkája sokrétű és komoly felelősséggel jár. A munkatársak támogatása, a megfelelő munkakörülmények biztosítása, a meglévő csapat megtartása és a vállalat működésének támogatása mind a HR fontos feladatai. Éppen ezért a toborzás teljes folyamatának átvétele valódi segítséget jelenthet a szervezet számára.</p>
-      <p class="copy">Mi nem a HR szerepét szeretnénk kiváltani, hanem támogatni és tehermentesíteni: átvesszük a recruitment operatív terheit, hogy a HR arra tudjon koncentrálni, ahol a jelenléte a legnagyobb értéket teremti.</p>
+      <p class="copy">A HR csapat munkája sokrétű és komoly felelősséggel jár. A munkatársak támogatása, a megfelelő munkakörülmények biztosítása, a meglévő csapat megtartása és a vállalat működésének támogatása mind a HR fontos feladatai. Éppen ezért a toborzás teljes folyamatának átvétele valódi segítséget jelenthet a szervezet számára. Mi nem a HR szerepét szeretnénk kiváltani, hanem támogatni és tehermentesíteni: átvesszük a recruitment operatív terheit, hogy a HR arra tudjon koncentrálni, ahol a jelenléte a legnagyobb értéket teremti.</p>
     </div>
   </div>
 
   <div class="problem">
     <div class="problem-visual">
-      <div class="problem-visual-kicker">A recruitment valódi költsége</div>
-      <div class="problem-visual-title">Üres pozíció.<br>Elhúzódó keresés.<br><span>Terhelt működés.</span></div>
+      <div class="problem-visual-kicker">Gyártó- és ipari vállalatok</div>
+      <div class="problem-visual-title">Egy fontos pozíció hónapokig betöltetlen marad.<br><span>A működés megérzi.</span></div>
       <div class="problem-visual-line"></div>
-      <p>Ha egy kulcspozíció hónapokig betöltetlen marad, annak hatása messze túlmutat a HR-en.</p>
+      <p>Nemcsak a szakemberhiány, hanem a magas fluktuáció is komoly kihívás.</p>
     </div>
-
     <div class="problem-copy">
       <h3>Egy rosszul betöltött pozíció nemcsak HR probléma, hanem közvetlenül hat a működésre, határidőkre, emberi erőforrás gazdálkodásra.</h3>
       <p class="copy">A gyártó- és ipari vállalatok pontosan tudják, milyen problémát okoz, ha egy fontos pozíció hónapokig betöltetlen marad. A szakemberhiány mellett a magas fluktuáció is komoly kihívást jelent: egy új munkatárs akár néhány hónap után továbbállhat, miközben a vállalat jelentős időt és energiát fektetett a kiválasztásába és betanításába.</p>
-
       <div class="stats">
         <div class="stat"><b>Betöltetlen pozíció</b><p>Elhúzódó keresés és működési nehézségek.</p></div>
         <div class="stat"><b>Fluktuáció</b><p>Újrakezdett kiválasztási és betanítási folyamatok.</p></div>
@@ -1072,12 +223,11 @@ header.nav > a:first-child .logo.logo-click-flip{
       <p class="copy">Ők az úgynevezett passzív jelöltek, akik nem feltétlenül keresnek, de egy megfelelő lehetőségre nyitottak lehetnek.</p>
       <p class="copy">Mi ezért nemcsak a jelentkezőkre építünk: célzottan felkutatjuk, megszólítjuk és előszűrjük azokat a szakembereket is, akiket egy álláshirdetés önmagában nem biztos, hogy elér.</p>
     </div>
-
     <div class="method-card">
       <div class="big">HIRDETÉS<br>ÉS VÁRAKOZÁS</div>
       <div class="arrow">↓</div>
       <div class="big" style="color:var(--accent)">KERESÉS<br>ÉS MEGSZÓLÍTÁS</div>
-      <p class="sub">Célzottan felkutatjuk, megszólítjuk és előszűrjük a releváns szakembereket.</p>
+      <p class="sub">A cél nem az, hogy minél több ember lássa az álláshirdetést. A cél az, hogy a megfelelő ember találkozzon a megfelelő ajánlattal.</p>
     </div>
   </div>
 </section>
@@ -1090,45 +240,47 @@ header.nav > a:first-child .logo.logo-click-flip{
       <p class="copy">A nehezen betölthető fizikai és technikai pozícióknál más célzásra, más eszközökre és más megszólításra van szükség. A cél nem az, hogy minél több ember lássa az álláshirdetést. A cél az, hogy a megfelelő ember találkozzon a megfelelő ajánlattal!</p>
     </div>
   </div>
-
   <div class="steps">
-    <div class="step"><h3>Célzott jelöltkutatás</h3><p>Releváns profilok felkutatása saját, naprakész adatbázisból.</p></div>
-    <div class="step"><h3>Adatbázis-alapú megszólítás</h3><p>Közvetlen megkeresés egy vonzó ajánlattal.</p></div>
-    <div class="step"><h3>Előszűrés</h3><p>Telefonos interjúk a jelöltek azonosítására.</p></div>
-    <div class="step"><h3>Teljes folyamat</h3><p>Az interjúk szervezésétől a visszajelzéseken át egészen a sikeres belépésig.</p></div>
+    <div class="step"><span class="step-no">01</span><h3>Célzott jelöltkutatás</h3><p>Releváns profilok felkutatása saját, naprakész adatbázisból.</p></div>
+    <div class="step"><span class="step-no">02</span><h3>Adatbázis-alapú megszólítás</h3><p>Közvetlen megkeresés egy vonzó ajánlattal.</p></div>
+    <div class="step"><span class="step-no">03</span><h3>Előszűrés</h3><p>Telefonos interjúk a jelöltek azonosítására.</p></div>
+    <div class="step"><span class="step-no">04</span><h3>Teljes folyamat</h3><p>Az interjúk szervezésétől a visszajelzéseken át egészen a sikeres belépésig.</p></div>
   </div>
 </section>
 
 <section id="levente" class="container section about">
-  <div class="about-photo">
-    <img class="expert-portrait" src="Levente-portrait-2.jpg" alt="Tóvizi Levente">
-  </div>
-
+  <div class="about-photo"><img class="expert-portrait" src="Levente-portrait-2.jpg" alt="Tóvizi Levente"></div>
   <div>
     <div class="kicker">Szakmai háttér</div>
-    <h2>Aki ezt az iparágat belülről ismeri.</h2>
+    <h2>A fizikai és technikai recruitment tapasztalatból épül.</h2>
     <p class="copy">Frissen végzett közgazdászként és vállalati tanácsadóként egy nemzetközi hátterű, a magyar piacon is régóta meghatározó HR szolgáltatónál kezdtem a pályafutásomat.</p>
     <p class="copy">Az egyik legnagyobb szakmai kihívásom és egyben fontos eredményem volt a kékgalléros toborzási csapat vezetése. Ezalatt rengeteget tanultam a fizikai munkaerőpiacról, a gyártóvállalatok igényeiről és arról, hogyan lehet a megfelelő szakembereket megtalálni egy folyamatosan változó piacon.</p>
     <p class="copy">Ezt a tapasztalatot ma saját recruitment csapatom építésében és fejlesztésében hasznosítom. A fizikai és technikai pozíciók mellett jelenleg HR-tanácsadás és fejvadászat területén is együtt dolgozom a hazai piac kiemelkedő szereplőivel.</p>
   </div>
 </section>
 
-<section id="folyamat" class="container section">
-  <div class="section-head">
-    <div class="kicker">End-to-end recruitment</div>
-    <div><h2>A teljes recruitment folyamat egy kézben.</h2><p class="copy">Nem egy újabb recruitment feladatot adunk a HR csapatnak, hanem egy teljes folyamatot veszünk át.</p></div>
-  </div>
-  <div class="timeline">
-    <div class="timeline-item" data-step="01"><div class="timeline-no">01</div><div><h3>Konzultáció</h3><p>A szervezet és a nehézségek megismerése.</p></div></div>
-    <div class="timeline-item" data-step="02"><div class="timeline-no">02</div><div><h3>Pozíciófelvétel</h3><p>Elvárások, feladatok és jelöltprofil meghatározása.</p></div></div>
-    <div class="timeline-item" data-step="03"><div class="timeline-no">03</div><div><h3>Helyszíni szemle</h3><p>A munkakörnyezet és a pozíció megismerése.</p></div></div>
-    <div class="timeline-item" data-step="04"><div class="timeline-no">04</div><div><h3>Célzás</h3><p>A potenciális jelölti kör meghatározása.</p></div></div>
-    <div class="timeline-item" data-step="05"><div class="timeline-no">05</div><div><h3>Jelöltkutatás</h3><p>Releváns profilok célzott felkutatása.</p></div></div>
-    <div class="timeline-item" data-step="06"><div class="timeline-no">06</div><div><h3>Megszólítás</h3><p>Adatbázis és social csatornák használata.</p></div></div>
-    <div class="timeline-item" data-step="07"><div class="timeline-no">07</div><div><h3>Előszűrés</h3><p>Online és telefonos kvalifikáció.</p></div></div>
-    <div class="timeline-item" data-step="08"><div class="timeline-no">08</div><div><h3>Interjúkoordináció</h3><p>Releváns jelöltek egyeztetése és szervezése.</p></div></div>
-    <div class="timeline-item" data-step="09"><div class="timeline-no">09</div><div><h3>Utánkövetés</h3><p>Visszajelzések és kapcsolattartás.</p></div></div>
-    <div class="timeline-item" data-step="10"><div class="timeline-no">10</div><div><h3>Belépés</h3><p>Az ajánlattól a sikeres belépésig követjük a folyamatot.</p></div></div>
+<section id="folyamat" class="process section">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">End-to-end recruitment</div>
+      <div>
+        <h2>A teljes recruitment folyamat egy kézben!</h2>
+        <p class="copy">Nem egy újabb recruitment feladatot adunk a HR csapatnak, hanem egy teljes folyamatot veszünk át.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-no">01</div><div><h3>Konzultáció</h3><p>A szervezet és a nehézségek megismerése.</p></div></div>
+      <div class="timeline-item"><div class="timeline-no">02</div><div><h3>Pozíciófelvétel</h3><p>A pozíció, az elvárások és a jelöltprofil pontosítása.</p></div></div>
+      <div class="timeline-item"><div class="timeline-no">03</div><div><h3>Célzott keresési stratégia</h3><p>A megfelelő célcsoport és megszólítás meghatározása.</p></div></div>
+      <div class="timeline-item"><div class="timeline-no">04</div><div><h3>Jelöltkutatás</h3><p>Releváns potenciális jelöltek felkutatása.</p></div></div>
+      <div class="timeline-item"><div class="timeline-no">05</div><div><h3>Megszólítás</h3><p>Közvetlen megkeresés a pozícióhoz illeszkedő ajánlattal.</p></div></div>
+      <div class="timeline-item"><div class="timeline-no">06</div><div><h3>Jelöltek azonosítása</h3><p>A potenciálisan releváns szakemberek kvalifikálása.</p></div></div>
+      <div class="timeline-item"><div class="timeline-no">07</div><div><h3>Előszűrés</h3><p>Telefonos interjúk a jelöltek azonosítására.</p></div></div>
+      <div class="timeline-item"><div class="timeline-no">08</div><div><h3>Interjúkoordináció</h3><p>Személyes interjúk megszervezése és koordinálása.</p></div></div>
+      <div class="timeline-item"><div class="timeline-no">09</div><div><h3>Visszajelzés és utánkövetés</h3><p>Kapcsolattartás a jelöltekkel és a megbízóval.</p></div></div>
+      <div class="timeline-item"><div class="timeline-no">10</div><div><h3>Sikeres belépés</h3><p>A teljes kiválasztási folyamat végigvitele egészen a belépésig.</p></div></div>
+    </div>
   </div>
 </section>
 
@@ -1137,16 +289,14 @@ header.nav > a:first-child .logo.logo-click-flip{
     <div>
       <div class="kicker">Garancia</div>
       <h2>Nem csak ígérjük, garanciát is vállalunk!</h2>
-      <p class="copy">A recruitment sikerét nem az mutatja, hogy valaki aláírta a munkaszerződést, hanem az, hogy valóban beválik és a vállalatnál marad.</p>
+      <p class="copy">A cél, hogy a megfelelő szakember kerüljön a megfelelő pozícióba, és a kiválasztási folyamat ne érjen véget a munkaszerződés aláírásával.</p>
     </div>
-
     <div>
       <div class="guarantees">
-        <div class="guarantee-box"><strong class="counter" data-target="1">0</strong><span>HÓNAP · BETANÍTOTT MUNKAKÖRÖK</span></div>
-        <div class="guarantee-box"><strong class="counter" data-target="2">0</strong><span>HÓNAP · SZAKMUNKÁS ÉS SZAKKÉPZETT POZÍCIÓK</span></div>
-        <div class="guarantee-box"><strong class="counter" data-target="3">0</strong><span>HÓNAP · MŰSZAK- ÉS TERÜLETVEZETŐI POZÍCIÓK</span></div>
+        <div class="guarantee-box"><strong>1</strong><span>HÓNAP<br>BETANÍTOTT MUNKAKÖRÖK</span></div>
+        <div class="guarantee-box"><strong>2</strong><span>HÓNAP<br>SZAKMUNKÁS ÉS SZAKKÉPZETT POZÍCIÓK</span></div>
+        <div class="guarantee-box"><strong>3</strong><span>HÓNAP<br>MŰSZAK- ÉS TERÜLETVEZETŐI POZÍCIÓK</span></div>
       </div>
-      <p style="font-weight:700;margin-top:20px">Ha az általunk hozott jelölt a garanciális időszakon belül távozik, új jelöltet keresünk helyette.</p>
     </div>
   </div>
 </section>
@@ -1156,334 +306,26 @@ header.nav > a:first-child .logo.logo-click-flip{
     <div>
       <div class="kicker">Következő lépés</div>
       <h2>Van olyan pozíciója, amit hónapok óta nem sikerül betölteni?</h2>
-      <p class="copy">Lehet, hogy nem egy újabb álláshirdetésre van szüksége. Beszéljük át a pozíciót, és nézzük meg, milyen célzott recruitment stratégiával lehetne elérni azokat a jelölteket, akikhez a hagyományos álláshirdetések már nem jutnak el.</p>
-      <a class="btn" href="#kapcsolat" onclick="document.getElementById('contactForm').scrollIntoView({behavior:'smooth'});return false;">Kérek egy konzultációt →</a>
+      <p class="copy">Lehet, hogy nem egy újabb álláshirdetésre van szüksége!</p>
+      <p class="copy">Ha szakmunkást, operátort, technikust vagy más fizikai állományú munkatársat keres, beszéljük át a pozíciót, és nézzük meg, milyen célzott recruitment stratégiával lehetne elérni azokat a jelölteket, akikhez a hagyományos álláshirdetések már nem jutnak el.</p>
+      <a class="btn" href="mailto:hello@tovizirecruitment.hu?subject=Konzultáció">KÉREK EGY KONZULTÁCIÓT <span>→</span></a>
     </div>
     <div class="contact-card">
       <small>Tóvizi Levente</small>
       <strong>Recruitment szakértő</strong>
-      <div style="color:#b8bec1">Gyártás. Ipar. Fizikai állomány.<br>Célzott recruitment.</div>
+      <div>Gyártás. Ipar. Fizikai állomány.<br>Célzott recruitment.</div>
     </div>
   </div>
-  <div class="container" style="margin-top:55px">
-    <form id="contactForm" onsubmit="event.preventDefault();document.getElementById('thanks').hidden=false" style="background:#fff;padding:28px;max-width:760px;border:1px solid var(--line)">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-        <input required placeholder="Név" style="padding:15px;border:1px solid #d5d8d9;font:inherit">
-        <input required placeholder="Cég" style="padding:15px;border:1px solid #d5d8d9;font:inherit">
-      </div>
-      <input required placeholder="E-mail vagy telefonszám" style="margin-top:14px;width:100%;padding:15px;border:1px solid #d5d8d9;font:inherit">
-      <textarea placeholder="Milyen pozíciót szeretne betölteni?" rows="4" style="margin-top:14px;width:100%;padding:15px;border:1px solid #d5d8d9;font:inherit"></textarea>
-      <button class="btn" type="submit" style="border:0;margin-top:14px;cursor:pointer">Küldés →</button>
-      <p id="thanks" hidden style="margin:15px 0 0;font-weight:700">Köszönjük! A kapcsolatfelvételi űrlap demóként működik — élesítéshez hozzá kell kötni a kívánt e-mail/CRM folyamatot.</p>
-    </form>
-  </div>
 </section>
+
 </main>
 
 <footer>
   <div class="container footer-inner">
-    <div class="footer-brand">
-      <img class="site-logo footer-logo" src="TR_Logo_Black.png" alt="Tóvizi Recruitment">
-    </div>
-    <div class="footer-contact">
-      <div class="footer-label">Helyszín</div>
-      <div>Budapest, Hungary</div>
-    </div>
-    <div class="footer-contact">
-      <div class="footer-label">LinkedIn</div>
-      <a href="https://www.linkedin.com/in/leventetovizi/" target="_blank" rel="noopener noreferrer">linkedin.com/in/leventetovizi/ ↗</a>
-    </div>
-    <div class="footer-contact">
-      <div class="footer-label">Kapcsolat</div>
-      <a href="mailto:levente@tovizirecruitment.com">✉ levente@tovizirecruitment.com</a>
-      <a href="tel:+36209623682">☎ +36-20-962-3682</a>
-    </div>
+    <img src="TR_Logo_Black.png" alt="Tóvizi Recruitment">
+    <small>© 2026 Tóvizi Recruitment · Gyártás. Ipar. Fizikai állomány. Célzott recruitment.</small>
   </div>
-  <div class="container footer-bottom">© Tóvizi Recruitment</div>
 </footer>
-<script>
-(function(){
-  const counters=document.querySelectorAll('.counter');
-  const section=document.querySelector('.guarantee');
-  let counted=false;
-  function animateCounters(){
-    if(counted) return;
-    counted=true;
-    counters.forEach(el=>{
-      const target=Number(el.dataset.target)||0;
-      const duration=1250;
-      const start=performance.now();
-      function tick(now){
-        const progress=Math.min((now-start)/duration,1);
-        const eased=1-Math.pow(1-progress,3);
-        el.textContent=Math.round(target*eased);
-        if(progress<1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    });
-  }
-  if(section && 'IntersectionObserver' in window){
-    const observer=new IntersectionObserver(entries=>{
-      if(entries.some(entry=>entry.isIntersecting)){ animateCounters(); observer.disconnect(); }
-    },{threshold:.3});
-    observer.observe(section);
-  } else { animateCounters(); }
-})();
-</script>
 
-<script id="logo-motion-script">
-(function(){
-  const logoLink=document.querySelector('header.nav > a:first-child');
-  if(!logoLink) return;
-  const logo=logoLink.querySelector('.logo');
-  if(!logo) return;
-  logoLink.addEventListener('click',function(e){
-    e.preventDefault();
-    logo.classList.remove('logo-click-flip');
-    void logo.offsetWidth;
-    logo.classList.add('logo-click-flip');
-  });
-})();
-</script>
-
-
-
-
-<style id="mobile-motion-final">
-/* Mobile: hover-equivalent motion is triggered by entering the viewport or touching the element. */
-@media (max-width: 900px){
-  .method-card.in-view,
-  .method-card.touch-active,
-  .target-card.in-view,
-  .target-card.touch-active,
-  .problem-card.in-view,
-  .problem-card.touch-active,
-  .timeline-item.in-view,
-  .timeline-item.touch-active,
-  .guarantee-box.in-view,
-  .guarantee-box.touch-active,
-  .guarantee-card.in-view,
-  .guarantee-card.touch-active,
-  .guarantee-item.in-view,
-  .guarantee-item.touch-active,
-  .step.in-view,
-  .step.touch-active,
-  .stats .stat.in-view,
-  .stats .stat.touch-active{
-    transform:translateY(-6px);
-  }
-
-  .method-card.in-view,
-  .method-card.touch-active{box-shadow:0 20px 48px rgba(0,0,0,.20);}
-  .problem-card.in-view,
-  .problem-card.touch-active{box-shadow:0 18px 38px rgba(17,19,21,.12);}
-  .timeline-item.in-view,
-  .timeline-item.touch-active{box-shadow:0 18px 38px rgba(17,19,21,.10);}
-  .guarantee-box.in-view,
-  .guarantee-box.touch-active{box-shadow:0 18px 36px rgba(17,19,21,.12);}
-  .step.in-view,
-  .step.touch-active{box-shadow:0 20px 42px rgba(17,19,21,.13);}
-
-  .hero-photo.in-view img,
-  .about-photo.in-view img,
-  .hero-image.in-view img,
-  .expert-image.in-view img,
-  .hero-photo.touch-active img,
-  .about-photo.touch-active img,
-  .hero-image.touch-active img,
-  .expert-image.touch-active img{
-    transform:scale(1.045);
-  }
-
-  .stats .stat.in-view b,
-  .stats .stat.touch-active b{transform:translateY(-3px) scale(1.04);}
-}
-</style>
-
-<script id="mobile-motion-script">
-(function(){
-  const dynamicSelectors = [
-    '.method-card','.target-card','.problem-card','.timeline-item',
-    '.guarantee-box','.guarantee-card','.guarantee-item','.step',
-    '.stats .stat','.hero-photo','.about-photo','.hero-image','.expert-image'
-  ];
-  const elements = document.querySelectorAll(dynamicSelectors.join(','));
-  if(!elements.length) return;
-
-  // On touch devices, reproduce the interactive movement with a short tap state.
-  elements.forEach(el=>{
-    let timer;
-    el.addEventListener('touchstart',()=>{
-      clearTimeout(timer);
-      el.classList.add('touch-active');
-      timer=setTimeout(()=>el.classList.remove('touch-active'),700);
-    },{passive:true});
-  });
-
-  // Elements animate when they enter the viewport, including on mobile where hover does not exist.
-  if('IntersectionObserver' in window){
-    const observer=new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('in-view');
-        }else{
-          entry.target.classList.remove('in-view');
-        }
-      });
-    },{threshold:.22, rootMargin:'0px 0px -8% 0px'});
-    elements.forEach(el=>observer.observe(el));
-  }
-})();
-</script>
-
-<style id="mobile-motion-children-final">
-@media (max-width:900px){
-  .method-card.in-view .big:first-child,
-  .method-card.touch-active .big:first-child{transform:translateX(-8px);opacity:.62}
-  .method-card.in-view .arrow,
-  .method-card.touch-active .arrow{transform:translateY(7px) rotate(90deg)}
-  .method-card.in-view .big:nth-of-type(2),
-  .method-card.touch-active .big:nth-of-type(2){transform:translateX(8px) scale(1.04)}
-  .method-card.in-view .sub,
-  .method-card.touch-active .sub{transform:translateY(4px);opacity:1}
-
-  .step.in-view:after,.step.touch-active:after,
-  .timeline-item.in-view:after,.timeline-item.touch-active:after,
-  .target-card.in-view:after,.target-card.touch-active:after,
-  .problem-card.in-view:after,.problem-card.touch-active:after,
-  .guarantee-card.in-view:after,.guarantee-card.touch-active:after,
-  .guarantee-item.in-view:after,.guarantee-item.touch-active:after{width:100%}
-
-  .step.in-view .step-no,.step.touch-active .step-no{transform:translateY(-4px) scale(1.08);color:var(--accent-dark)}
-  .step.in-view h3,.step.touch-active h3,
-  .timeline-item.in-view h3,.timeline-item.touch-active h3,
-  .target-card.in-view h3,.target-card.touch-active h3,
-  .problem-card.in-view h3,.problem-card.touch-active h3{transform:translateX(5px)}
-
-  .step.in-view p,.step.touch-active p,
-  .timeline-item.in-view p,.timeline-item.touch-active p{transform:translateX(5px)}
-  .step.in-view p,.step.touch-active p{color:#41474b}
-
-  .timeline-item.in-view .timeline-no,
-  .timeline-item.touch-active .timeline-no{
-    transform:scale(1.1) rotate(6deg);
-    background:var(--accent);
-    color:var(--ink);
-  }
-
-  .problem-card.in-view h3,.problem-card.touch-active h3{color:var(--accent-dark)}
-  .problem-card.in-view p,.problem-card.touch-active p{transform:translateY(-2px);opacity:1}
-
-  .target-card.in-view h3,.target-card.touch-active h3{color:var(--accent-dark)}
-}
-</style>
-
-<style id="final-motion-fixes">
-/* Final interaction fixes */
-
-/* Targeted reach: a little more noticeable, still restrained */
-.target-card {
-  transition: transform .42s cubic-bezier(.2,.8,.2,1),
-              box-shadow .42s cubic-bezier(.2,.8,.2,1),
-              border-color .32s ease,
-              background-color .32s ease;
-}
-.target-card:hover,
-.target-card.in-view {
-  transform: translateY(-10px) scale(1.012);
-  box-shadow: 0 20px 44px rgba(17,19,21,.11);
-}
-
-/* Contact form submit button uses the same lime as the other primary buttons */
-#contactForm button[type="submit"] {
-  background: var(--accent) !important;
-  color: var(--ink) !important;
-  border: 1px solid var(--accent) !important;
-  box-shadow: none !important;
-}
-#contactForm button[type="submit"]:hover {
-  background: #a9ef35 !important;
-  border-color: #a9ef35 !important;
-  color: var(--ink) !important;
-  transform: translateY(-2px);
-}
-
-/* On mobile the Post & Pray arrow enters once, then settles in its normal position.
-   It must NOT remain translated/rotated after the animation. */
-@media (max-width:900px){
-  @keyframes methodArrowIn {
-    0%   { opacity:0; transform:translateY(18px); }
-    45%  { opacity:1; transform:translateY(-7px); }
-    70%  { opacity:1; transform:translateY(3px); }
-    100% { opacity:1; transform:translateY(0); }
-  }
-
-  .method-card.in-view .arrow {
-    animation: methodArrowIn .8s cubic-bezier(.2,.8,.2,1) both;
-    transform:translateY(0) !important;
-    opacity:1;
-  }
-
-  .method-card.touch-active .arrow {
-    animation: methodArrowIn .8s cubic-bezier(.2,.8,.2,1) both;
-    transform:translateY(0) !important;
-    opacity:1;
-  }
-}
-
-/* Counter digits: start visibly at zero and roll upward into the final value. */
-.counter {
-  display:inline-block;
-  min-width:1ch;
-  font-variant-numeric: tabular-nums;
-  will-change: contents;
-}
-</style>
-
-
-<style id="targeted-reach-enhancement">
-/* Célzott elérés – karakteresebb mozgás, egységes lime akcentussal */
-.steps .step{
-  transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease,
-              background-color .35s ease, border-color .35s ease;
-}
-.steps .step::before{
-  content:""; position:absolute; inset:0; background:var(--accent);
-  opacity:0; transform:scaleX(0); transform-origin:left center;
-  transition:opacity .35s ease, transform .45s cubic-bezier(.2,.8,.2,1);
-  pointer-events:none;
-}
-.steps .step > *{position:relative; z-index:1;}
-.steps .step:hover{
-  transform:translateY(-12px) scale(1.025);
-  box-shadow:0 24px 50px rgba(17,19,21,.16);
-  border-color:var(--accent);
-  z-index:2;
-}
-.steps .step:hover::before{opacity:.10; transform:scaleX(1);}
-.steps .step:hover .step-no{transform:translateY(-5px) scale(1.12); color:var(--ink);}
-.steps .step:hover h3{transform:translateX(7px);}
-.steps .step:hover p{transform:translateX(7px); color:#303538;}
-@media (max-width:900px){
-  .steps .step.in-view{
-    transform:translateY(-7px) scale(1.015);
-    box-shadow:0 18px 38px rgba(17,19,21,.13);
-    border-color:var(--accent);
-    z-index:2;
-  }
-  .steps .step.in-view::before,
-  .steps .step.touch-active::before{opacity:.09; transform:scaleX(1);}
-  .steps .step.touch-active{
-    transform:translateY(-9px) scale(1.02);
-    box-shadow:0 22px 44px rgba(17,19,21,.15);
-    border-color:var(--accent);
-    z-index:2;
-  }
-  .steps .step.in-view .step-no,.steps .step.touch-active .step-no{transform:translateY(-5px) scale(1.12);color:var(--ink);}
-  .steps .step.in-view h3,.steps .step.touch-active h3{transform:translateX(7px);}
-  .steps .step.in-view p,.steps .step.touch-active p{transform:translateX(7px);color:#303538;}
-}
-@media (prefers-reduced-motion:reduce){.steps .step,.steps .step::before{transition:none!important}}
-</style>
 </body>
 </html>
