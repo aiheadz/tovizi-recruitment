@@ -1,12 +1,24 @@
-TÓVIZI RECRUITMENT — PDF FINAL UPDATE
+TÓVIZI RECRUITMENT — PDF JAVÍTOTT PROJEKT
 
-A PDF mind a 6 oldalának tartalmi módosításai az index.html-ben vannak.
-A meglévő functions/[[path]].js, schema.sql és képfájlok változatlanok maradnak.
+A projekt az eredeti Tóvizi vizuális rendszerre épül: nagy hero fotó, lime/black vizuális rendszer,
+hover és viewport animációk, számláló animáció, logó animáció, 10 lépéses folyamat és teljes footer.
+
+A PDF 6 oldalának kért tartalmi módosításai:
+- új hero szöveg
+- HR-tehermentesítés
+- betöltetlen pozíció / fluktuáció / HR-terhelés
+- „A hirdetés önmagában nem elég.”
+- passzív jelöltek
+- „HIRDETÉS ÉS VÁRAKOZÁS → KERESÉS ÉS MEGSZÓLÍTÁS”
+- 4 célzott recruitment elem; Meta/TikTok eltávolítva
+- szakmai háttér jogilag semlegesített szövege
+- 10 pontos teljes recruitment folyamat
+- 1 / 2 / 3 hónapos garancia
+- végső konzultációs CTA
 
 GitHub Desktop:
-1. Nyisd meg a meglévő Tovizi-recruitment repository mappáját.
-2. Cseréld le a jelenlegi index.html-t erre a fájlra.
-3. Ne töröld és ne cseréld a functions/[[path]].js, schema.sql, TR_Logo_Black.png,
-   TR_Logo_Header.png vagy Levente-portrait-2.jpg fájlokat.
-4. Changes -> csak index.html legyen módosítva.
-5. Commit to main -> Push origin.
+1. A meglévő Tovizi-recruitment repo tartalmát cseréld erre a teljes mappára.
+2. A functions/[[path]].js, schema.sql és képfájlok is benne vannak.
+3. Changes ellenőrzése.
+4. Commit to main.
+5. Push origin.
