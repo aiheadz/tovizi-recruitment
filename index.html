@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="hu">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Tóvizi Recruitment — Célzott recruitment gyártó- és ipari vállalatoknak</title>
-<meta name="description" content="Célzott recruitment gyártó- és ipari vállalatoknak. Szakmunkások, operátorok, technikusok és fizikai állomány célzott felkutatása, megszólítása és előszűrése.">
+<meta content="Célzott recruitment gyártó- és ipari vállalatoknak. Szakmunkások, operátorok, technikusok és fizikai állomány célzott felkutatása, megszólítása és előszűrése." name="description"/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
 
@@ -151,7 +152,6 @@ footer{background:var(--dark);color:#fff;padding:32px 0}
  .footer{flex-direction:column;align-items:flex-start}
 }
 </style>
-
 <style id="final-logo-motion">
 .nav > a:first-child{perspective:1000px;display:flex;align-items:center}
 .nav > a:first-child .logo{transform-style:preserve-3d;backface-visibility:hidden;transform-origin:center center;animation:logoEntrance 850ms cubic-bezier(.16,1,.3,1) both}
@@ -160,15 +160,7 @@ footer{background:var(--dark);color:#fff;padding:32px 0}
 @keyframes logoFlip{0%{transform:perspective(1000px) rotateY(0) scale(1)}45%{transform:perspective(1000px) rotateY(190deg) scale(1.04)}75%{transform:perspective(1000px) rotateY(360deg) scale(1.025) rotateZ(3deg)}100%{transform:perspective(1000px) rotateY(360deg) scale(1) rotateZ(0)}}
 @media(prefers-reduced-motion:reduce){.nav > a:first-child .logo{animation:none!important}.logo-click-flip{animation:none!important}}
 </style>
-<style id="final-content-interactions">
-.issue-grid .issue,.service-grid .service{position:relative;overflow:hidden;transition:transform .42s cubic-bezier(.2,.8,.2,1),box-shadow .42s cubic-bezier(.2,.8,.2,1),background-color .32s ease}
-.issue-grid .issue::after,.service-grid .service::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#b8ff3d;transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
-.issue-grid .issue:hover,.service-grid .service:hover{transform:translateY(-8px);box-shadow:0 18px 34px rgba(0,0,0,.10);background:#fff;z-index:2}
-.issue-grid .issue:hover::after,.service-grid .service:hover::after{transform:scaleX(1)}
-.issue-grid .issue strong,.issue-grid .issue span,.service-grid .service h3,.service-grid .service p{position:relative;transition:transform .35s ease,color .35s ease}
-.issue-grid .issue:hover strong,.issue-grid .issue:hover span,.service-grid .service:hover h3,.service-grid .service:hover p{transform:translateX(6px)}
-@media(max-width:900px){.issue-grid .issue.in-view,.service-grid .service.in-view{transform:translateY(-6px);box-shadow:0 16px 30px rgba(0,0,0,.10)}}
-</style>
+
 <style id="restored-original-interaction-system">
 :root{
   --tr-lime:#b8ff3d;
@@ -379,321 +371,202 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
 }
 </style>
 
-<style id="qa-interaction-fix">
-/* FINAL QA: every interactive block explicitly receives the intended desktop hover. */
-.issue-grid .issue,
-.service-grid .service,
-.hero-photo,
-.about-photo{
-  will-change:transform;
-}
-.issue-grid .issue{
-  position:relative;
-  overflow:hidden;
-  transition:transform .38s cubic-bezier(.2,.8,.2,1),
-             box-shadow .38s cubic-bezier(.2,.8,.2,1),
-             background-color .32s ease;
-}
-.issue-grid .issue::after{
-  content:"";
-  position:absolute;
-  left:0;right:0;bottom:0;height:3px;
-  background:#b8ff3d;
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform .4s cubic-bezier(.2,.8,.2,1);
-}
-.issue-grid .issue:hover{
-  transform:translateY(-8px) !important;
-  box-shadow:0 18px 34px rgba(0,0,0,.10);
-  background:#fff;
-  z-index:2;
-}
-.issue-grid .issue:hover::after{transform:scaleX(1)}
-.issue-grid .issue strong,
-.issue-grid .issue span{
-  transition:transform .35s ease,color .35s ease;
-  position:relative;
-  z-index:1;
-}
-.issue-grid .issue:hover strong,
-.issue-grid .issue:hover span{transform:translateX(6px)}
-
-.service-grid .service{
-  position:relative;
-  overflow:hidden;
-  transition:transform .42s cubic-bezier(.2,.8,.2,1),
-             box-shadow .42s cubic-bezier(.2,.8,.2,1),
-             border-color .35s ease,
-             background-color .35s ease;
-}
-.service-grid .service::before{
-  content:"";
-  position:absolute;
-  left:0;top:0;width:3px;height:100%;
-  background:#b8ff3d;
-  transform:scaleY(0);
-  transform-origin:bottom;
-  transition:transform .4s cubic-bezier(.2,.8,.2,1);
-}
-.service-grid .service:hover{
-  transform:translateY(-10px) scale(1.018) !important;
-  box-shadow:0 22px 44px rgba(17,19,21,.14);
-  border-color:#b8ff3d;
-  z-index:3;
-}
-.service-grid .service:hover::before{transform:scaleY(1)}
-.service-grid .service h3,
-.service-grid .service p,
-.service-grid .service-no{
-  position:relative;
-  transition:transform .35s ease,color .35s ease;
-}
-.service-grid .service:hover h3,
-.service-grid .service:hover p{transform:translateX(7px)}
-.service-grid .service:hover .service-no{transform:translateY(-4px);color:#16191b}
-
-.hero-photo,
-.about-photo{
-  overflow:hidden !important;
-}
-.hero-photo img,
-.about-photo img{
-  transform:scale(1) !important;
-  transition:transform .7s cubic-bezier(.16,1,.3,1) !important;
-  transform-origin:center center !important;
-}
-.hero-photo:hover img,
-.about-photo:hover img{
-  transform:scale(1.075) !important;
-}
-
-@media(max-width:900px){
- .issue-grid .issue.in-view,.issue-grid .issue.touch-active,
- .service-grid .service.in-view,.service-grid .service.touch-active{
-   transform:translateY(-7px) !important;
-   box-shadow:0 18px 34px rgba(0,0,0,.10);
- }
- .hero-photo.in-view img,.hero-photo.touch-active img,
- .about-photo.in-view img,.about-photo.touch-active img{
-   transform:scale(1.045) !important;
- }
-}
-@media(prefers-reduced-motion:reduce){
- .issue-grid .issue,.service-grid .service,
- .issue-grid .issue::after,.service-grid .service::before,
- .hero-photo img,.about-photo img{transition:none!important}
+<style id="final-safe-image-color">
+.hero-photo img, .about-photo img, .hero-image img, .expert-image img{
+  filter:none !important;
+  -webkit-filter:none !important;
 }
 </style>
 </head>
-
 <body>
-<header>
- <div class="container nav">
-  <a href="#top"><img class="logo" src="TR_Logo_Header.png" alt="Tóvizi Recruitment"></a>
-  <nav class="navlinks">
-   <a href="#modszertan">Módszertan</a>
-   <a href="#folyamat">Folyamat</a>
-   <a href="#levente">Rólam</a>
-   <a href="#kapcsolat">Beszéljünk</a>
-  </nav>
- </div>
+<header class="container nav">
+<a href="#top"><img alt="Tóvizi Recruitment" class="logo" src="TR_Logo_Header.png"/></a>
+<nav class="navlinks">
+<a href="#modszertan">Módszertan</a>
+<a href="#folyamat">Folyamat</a>
+<a href="#levente">Rólam</a>
+<a href="#kapcsolat">Beszéljünk</a>
+</nav>
+
 </header>
-
 <main id="top">
-
 <section class="container hero">
- <div>
-  <div class="eyebrow">Célzott recruitment</div>
-  <h1>Nem várjuk, hogy jelentkezzenek.<span class="highlight">Keressük meg őket!</span></h1>
-  <p class="lead">Szakmunkást, operátort vagy technikust keres? A szerviz csapatot kell bővíteni?</p>
-  <p class="copy2">A jó szakemberekért ma már verseny van. Sokuknak van munkája, és nem állásportálokat böngésznek. Mi célzottan megkeressük és megszólítjuk őket, majd a valóban releváns jelölteket eljuttatjuk Önökhöz.</p>
-  <p class="copy2">A gyártó- és ipari vállalatok számára nem egyszerűen álláshirdetéseket készítünk és jelentkezőkre várunk, hanem célzottan felkutatjuk, megszólítjuk és előszűrjük a potenciális munkavállalókat, majd a teljes kiválasztási folyamatot végigvisszük egészen a sikeres belépésig.</p>
-  <p class="claim">Nem több jelentkezőt hozunk. <strong>A megfelelő embert keressük meg.</strong></p>
-  <a class="btn" href="#kapcsolat">BESZÉLJÜNK A NYITOTT POZÍCIÓKRÓL <span>→</span></a>
- </div>
- <div class="hero-photo">
-  <img src="Levente-portrait-2.jpg" alt="Tóvizi Levente">
- </div>
+<div>
+<div class="eyebrow">Célzott recruitment</div>
+<h1>Nem várjuk, hogy jelentkezzenek.<span class="highlight">Keressük meg őket!</span></h1>
+<p class="lead">Szakmunkást, operátort vagy technikust keres? A szerviz csapatot kell bővíteni?</p>
+<p class="copy2">A jó szakemberekért ma már verseny van. Sokuknak van munkája, és nem állásportálokat böngésznek. Mi célzottan megkeressük és megszólítjuk őket, majd a valóban releváns jelölteket eljuttatjuk Önökhöz.</p>
+<p class="copy2">A gyártó- és ipari vállalatok számára nem egyszerűen álláshirdetéseket készítünk és jelentkezőkre várunk, hanem célzottan felkutatjuk, megszólítjuk és előszűrjük a potenciális munkavállalókat, majd a teljes kiválasztási folyamatot végigvisszük egészen a sikeres belépésig.</p>
+<p class="claim">Nem több jelentkezőt hozunk. <strong>A megfelelő embert keressük meg.</strong></p>
+<a class="btn" href="#kapcsolat">BESZÉLJÜNK A NYITOTT POZÍCIÓKRÓL <span>→</span></a>
+</div>
+<div class="hero-photo">
+<img alt="Tóvizi Levente" src="Levente-portrait-2.jpg"/>
+</div>
 </section>
-
-<section id="problema" class="container section">
- <div class="problem-head">
-  <div class="kicker">A probléma</div>
-  <div>
-   <h2>A megfelelő embert egyre nehezebb megtalálni…</h2>
-   <p class="copy" style="margin-top:25px">A HR csapat munkája sokrétű és komoly felelősséggel jár. A munkatársak támogatása, a megfelelő munkakörülmények biztosítása, a meglévő csapat megtartása és a vállalat működésének támogatása mind a HR fontos feladatai. Éppen ezért a toborzás teljes folyamatának átvétele valódi segítséget jelenthet a szervezet számára.</p>
-   <p class="copy" style="margin-top:18px">Mi nem a HR szerepét szeretnénk kiváltani, hanem támogatni és tehermentesíteni: átvesszük a recruitment operatív terheit, hogy a HR arra tudjon koncentrálni, ahol a jelenléte a legnagyobb értéket teremti.</p>
-  </div>
- </div>
-
- <div class="problem">
-  <div class="problem-card">
-   <div class="mini">Gyártó- és ipari vállalatok</div>
-   <div class="big">Üres pozíció.<br>Elhúzódó keresés.<br><span>Terhelt működés.</span></div>
-   <div class="rule"></div>
-   <p>Ha egy fontos pozíció hónapokig betöltetlen marad, annak hatása messze túlmutat a HR-en.</p>
-  </div>
-  <div class="problem-copy">
-   <h3>A gyártó- és ipari vállalatok pontosan tudják, milyen problémát okoz, ha egy fontos pozíció hónapokig betöltetlen marad.</h3>
-   <p class="copy">A szakemberhiány mellett a magas fluktuáció is komoly kihívást jelent: egy új munkatárs akár néhány hónap után továbbállhat, miközben a vállalat jelentős időt és energiát fektetett a kiválasztásába és betanításába.</p>
-   <p class="copy" style="margin-top:20px">Egy rosszul betöltött pozíció nemcsak HR probléma, hanem közvetlenül hat a működésre, határidőkre, emberi erőforrás gazdálkodásra.</p>
-   <div class="issue-grid" style="margin-top:28px">
-    <div class="issue"><strong>Betöltetlen pozíció</strong><span>Elhúzódó keresés és működési nehézségek.</span></div>
-    <div class="issue"><strong>Fluktuáció</strong><span>Újrakezdett kiválasztási és betanítási folyamatok.</span></div>
-    <div class="issue"><strong>HR-terhelés</strong><span>Kevesebb idő jut a stratégiai feladatokra.</span></div>
-   </div>
-  </div>
- </div>
+<section class="container section" id="problema">
+<div class="problem-head">
+<div class="kicker">A probléma</div>
+<div>
+<h2>A megfelelő embert egyre nehezebb megtalálni…</h2>
+<p class="copy" style="margin-top:25px">A HR csapat munkája sokrétű és komoly felelősséggel jár. A munkatársak támogatása, a megfelelő munkakörülmények biztosítása, a meglévő csapat megtartása és a vállalat működésének támogatása mind a HR fontos feladatai. Éppen ezért a toborzás teljes folyamatának átvétele valódi segítséget jelenthet a szervezet számára.</p>
+<p class="copy" style="margin-top:18px">Mi nem a HR szerepét szeretnénk kiváltani, hanem támogatni és tehermentesíteni: átvesszük a recruitment operatív terheit, hogy a HR arra tudjon koncentrálni, ahol a jelenléte a legnagyobb értéket teremti.</p>
+</div>
+</div>
+<div class="problem">
+<div class="problem-card">
+<div class="mini">Gyártó- és ipari vállalatok</div>
+<div class="big">Üres pozíció.<br/>Elhúzódó keresés.<br/><span>Terhelt működés.</span></div>
+<div class="rule"></div>
+<p>Ha egy fontos pozíció hónapokig betöltetlen marad, annak hatása messze túlmutat a HR-en.</p>
+</div>
+<div class="problem-copy">
+<h3>A gyártó- és ipari vállalatok pontosan tudják, milyen problémát okoz, ha egy fontos pozíció hónapokig betöltetlen marad.</h3>
+<p class="copy">A szakemberhiány mellett a magas fluktuáció is komoly kihívást jelent: egy új munkatárs akár néhány hónap után továbbállhat, miközben a vállalat jelentős időt és energiát fektetett a kiválasztásába és betanításába.</p>
+<p class="copy" style="margin-top:20px">Egy rosszul betöltött pozíció nemcsak HR probléma, hanem közvetlenül hat a működésre, határidőkre, emberi erőforrás gazdálkodásra.</p>
+<div class="stats issue-grid" style="margin-top:28px">
+<div class="stat issue"><b>Betöltetlen pozíció</b><p>Elhúzódó keresés és működési nehézségek.</p></div>
+<div class="stat issue"><b>Fluktuáció</b><p>Újrakezdett kiválasztási és betanítási folyamatok.</p></div>
+<div class="stat issue"><b>HR-terhelés</b><p>Kevesebb idő jut a stratégiai feladatokra.</p></div>
+</div>
+</div>
+</div>
 </section>
-
-<section id="modszertan" class="dark section">
- <div class="container method">
-  <div>
-   <img class="method-logo" src="TR_Logo_Black.png" alt="Tóvizi Recruitment">
-   <div class="kicker">A módszer</div>
-   <h2>A hirdetés önmagában nem elég.</h2>
-   <div class="method-sub">A megfelelő jelöltet nem megvárni kell, hanem megkeresni!</div>
-   <p class="copy">A legtöbb vállalat álláshirdetéseken és a megszokott toborzási csatornákon keresztül éri el az aktív álláskeresőket. Ez a kiválasztási folyamat fontos része, de a munkaerőpiacnak csak egy részét fedi le. A releváns szakemberek jelentős része ugyanis már dolgozik, ezért nem keres folyamatosan új lehetőségeket és nem böngészi rendszeresen az állásportálokat.</p>
-   <p class="copy">Ők az úgynevezett passzív jelöltek, akik nem feltétlenül keresnek, de egy megfelelő lehetőségre nyitottak lehetnek.</p>
-   <p class="copy">Mi ezért nemcsak a jelentkezőkre építünk: célzottan felkutatjuk, megszólítjuk és előszűrjük azokat a szakembereket is, akiket egy álláshirdetés önmagában nem biztos, hogy elér.</p>
-  </div>
-  <div class="method-card">
-   <div class="big">HIRDETÉS ÉS<br>VÁRAKOZÁS</div>
-   <div class="arrow">↓</div>
-   <div class="big green">KERESÉS ÉS<br>MEGSZÓLÍTÁS</div>
-  </div>
- </div>
+<section class="dark section" id="modszertan">
+<div class="container method">
+<div>
+<img alt="Tóvizi Recruitment" class="method-logo" src="TR_Logo_Black.png"/>
+<div class="kicker">A módszer</div>
+<h2>A hirdetés önmagában nem elég.</h2>
+<div class="method-sub">A megfelelő jelöltet nem megvárni kell, hanem megkeresni!</div>
+<p class="copy">A legtöbb vállalat álláshirdetéseken és a megszokott toborzási csatornákon keresztül éri el az aktív álláskeresőket. Ez a kiválasztási folyamat fontos része, de a munkaerőpiacnak csak egy részét fedi le. A releváns szakemberek jelentős része ugyanis már dolgozik, ezért nem keres folyamatosan új lehetőségeket és nem böngészi rendszeresen az állásportálokat.</p>
+<p class="copy">Ők az úgynevezett passzív jelöltek, akik nem feltétlenül keresnek, de egy megfelelő lehetőségre nyitottak lehetnek.</p>
+<p class="copy">Mi ezért nemcsak a jelentkezőkre építünk: célzottan felkutatjuk, megszólítjuk és előszűrjük azokat a szakembereket is, akiket egy álláshirdetés önmagában nem biztos, hogy elér.</p>
+</div>
+<div class="method-card">
+<div class="big">HIRDETÉS ÉS<br/>VÁRAKOZÁS</div>
+<div class="arrow">↓</div>
+<div class="big green">KERESÉS ÉS<br/>MEGSZÓLÍTÁS</div>
+</div>
+</div>
 </section>
-
 <section class="container section">
- <div class="target-head">
-  <div class="kicker">Célzott elérés</div>
-  <div>
-   <h2>Különböző pozíciók, különböző stratégiák.</h2>
-   <p class="copy">A nehezen betölthető fizikai és technikai pozícióknál más célzásra, más eszközökre és más megszólításra van szükség. A cél nem az, hogy minél több ember lássa az álláshirdetést. A cél az, hogy a megfelelő ember találkozzon a megfelelő ajánlattal!</p>
-  </div>
- </div>
-
- <div class="service-grid">
-  <div class="service"><h3>Célzott jelöltkutatás</h3><p>Releváns profilok felkutatása saját, naprakész adatbázisból.</p></div>
-  <div class="service"><h3>Adatbázis-alapú megszólítás</h3><p>Közvetlen megkeresés egy vonzó ajánlattal.</p></div>
-  <div class="service"><h3>Előszűrés</h3><p>Telefonos interjúk a jelöltek azonosítására.</p></div>
-  <div class="service"><h3>Teljes folyamat</h3><p>Az interjúk szervezésétől a visszajelzéseken át egészen a sikeres belépésig.</p></div>
- </div>
+<div class="target-head">
+<div class="kicker">Célzott elérés</div>
+<div>
+<h2>Különböző pozíciók, különböző stratégiák.</h2>
+<p class="copy">A nehezen betölthető fizikai és technikai pozícióknál más célzásra, más eszközökre és más megszólításra van szükség. A cél nem az, hogy minél több ember lássa az álláshirdetést. A cél az, hogy a megfelelő ember találkozzon a megfelelő ajánlattal!</p>
+</div>
+</div>
+<div class="steps service-grid">
+<div class="step service"><h3>Célzott jelöltkutatás</h3><p>Releváns profilok felkutatása saját, naprakész adatbázisból.</p></div>
+<div class="step service"><h3>Adatbázis-alapú megszólítás</h3><p>Közvetlen megkeresés egy vonzó ajánlattal.</p></div>
+<div class="step service"><h3>Előszűrés</h3><p>Telefonos interjúk a jelöltek azonosítására.</p></div>
+<div class="step service"><h3>Teljes folyamat</h3><p>Az interjúk szervezésétől a visszajelzéseken át egészen a sikeres belépésig.</p></div>
+</div>
 </section>
-
-<section id="levente" class="container section about">
- <div class="about-photo"><img src="Levente-portrait-2.jpg" alt="Tóvizi Levente"></div>
- <div>
-  <div class="kicker">Szakmai háttér</div>
-  <h2>Aki ezt az iparágat belülről ismeri.</h2>
-  <p class="copy">Frissen végzett közgazdászként és vállalati tanácsadóként egy nemzetközi hátterű, a magyar piacon is régóta meghatározó HR szolgáltatónál kezdtem a pályafutásomat.</p>
-  <p class="copy">Az egyik legnagyobb szakmai kihívásom és egyben fontos eredményem volt a kékgalléros toborzási csapat vezetése. Ezalatt rengeteget tanultam a fizikai munkaerőpiacról, a gyártóvállalatok igényeiről és arról, hogyan lehet a megfelelő szakembereket megtalálni egy folyamatosan változó piacon.</p>
-  <p class="copy">Ezt a tapasztalatot ma saját recruitment csapatom építésében és fejlesztésében hasznosítom. A fizikai és technikai pozíciók mellett jelenleg HR-tanácsadás és fejvadászat területén is együtt dolgozom a hazai piac kiemelkedő szereplőivel.</p>
- </div>
+<section class="container section about" id="levente">
+<div class="about-photo"><img alt="Tóvizi Levente" src="Levente-portrait-2.jpg"/></div>
+<div>
+<div class="kicker">Szakmai háttér</div>
+<h2>Aki ezt az iparágat belülről ismeri.</h2>
+<p class="copy">Frissen végzett közgazdászként és vállalati tanácsadóként egy nemzetközi hátterű, a magyar piacon is régóta meghatározó HR szolgáltatónál kezdtem a pályafutásomat.</p>
+<p class="copy">Az egyik legnagyobb szakmai kihívásom és egyben fontos eredményem volt a kékgalléros toborzási csapat vezetése. Ezalatt rengeteget tanultam a fizikai munkaerőpiacról, a gyártóvállalatok igényeiről és arról, hogyan lehet a megfelelő szakembereket megtalálni egy folyamatosan változó piacon.</p>
+<p class="copy">Ezt a tapasztalatot ma saját recruitment csapatom építésében és fejlesztésében hasznosítom. A fizikai és technikai pozíciók mellett jelenleg HR-tanácsadás és fejvadászat területén is együtt dolgozom a hazai piac kiemelkedő szereplőivel.</p>
+</div>
 </section>
-
-<section id="folyamat" class="process section">
- <div class="container">
-  <div class="process-head">
-   <div class="kicker">End-to-end recruitment</div>
-   <div>
-    <h2>A teljes recruitment folyamat egy kézben!</h2>
-    <p class="copy">Nem egy újabb recruitment feladatot adunk a HR csapatnak, hanem egy teljes folyamatot veszünk át.</p>
-   </div>
-  </div>
-
-  <div class="timeline">
-   <div class="timeline-item"><div class="timeline-no">01</div><div><h3>Konzultáció</h3><p>A szervezet és a nehézségek megismerése.</p></div></div>
-   <div class="timeline-item"><div class="timeline-no">02</div><div><h3>Pozíciófelvétel</h3><p>Elvárások, feladatok és jelöltprofil meghatározása.</p></div></div>
-   <div class="timeline-item"><div class="timeline-no">03</div><div><h3>Helyszíni szemle</h3><p>A munkakörnyezet és a pozíció megismerése.</p></div></div>
-   <div class="timeline-item"><div class="timeline-no">04</div><div><h3>Célzás</h3><p>A potenciális jelölti kör meghatározása.</p></div></div>
-   <div class="timeline-item"><div class="timeline-no">05</div><div><h3>Jelöltkutatás</h3><p>Releváns profilok célzott felkutatása.</p></div></div>
-   <div class="timeline-item"><div class="timeline-no">06</div><div><h3>Megszólítás</h3><p>Adatbázis és social csatornák használata.</p></div></div>
-   <div class="timeline-item"><div class="timeline-no">07</div><div><h3>Előszűrés</h3><p>Online és telefonos kvalifikáció.</p></div></div>
-   <div class="timeline-item"><div class="timeline-no">08</div><div><h3>Interjúkoordináció</h3><p>Személyes interjúk megszervezése és koordinálása.</p></div></div>
-   <div class="timeline-item"><div class="timeline-no">09</div><div><h3>Utánkövetés</h3><p>Visszajelzések és kapcsolattartás.</p></div></div>
-   <div class="timeline-item"><div class="timeline-no">10</div><div><h3>Belépés</h3><p>Az ajánlattól a sikeres belépésig követjük a folyamatot.</p></div></div>
-  </div>
- </div>
+<section class="process section" id="folyamat">
+<div class="container">
+<div class="process-head">
+<div class="kicker">End-to-end recruitment</div>
+<div>
+<h2>A teljes recruitment folyamat egy kézben!</h2>
+<p class="copy">Nem egy újabb recruitment feladatot adunk a HR csapatnak, hanem egy teljes folyamatot veszünk át.</p>
+</div>
+</div>
+<div class="timeline">
+<div class="timeline-item"><div class="timeline-no">01</div><div><h3>Konzultáció</h3><p>A szervezet és a nehézségek megismerése.</p></div></div>
+<div class="timeline-item"><div class="timeline-no">02</div><div><h3>Pozíciófelvétel</h3><p>Elvárások, feladatok és jelöltprofil meghatározása.</p></div></div>
+<div class="timeline-item"><div class="timeline-no">03</div><div><h3>Helyszíni szemle</h3><p>A munkakörnyezet és a pozíció megismerése.</p></div></div>
+<div class="timeline-item"><div class="timeline-no">04</div><div><h3>Célzás</h3><p>A potenciális jelölti kör meghatározása.</p></div></div>
+<div class="timeline-item"><div class="timeline-no">05</div><div><h3>Jelöltkutatás</h3><p>Releváns profilok célzott felkutatása.</p></div></div>
+<div class="timeline-item"><div class="timeline-no">06</div><div><h3>Megszólítás</h3><p>Adatbázis és social csatornák használata.</p></div></div>
+<div class="timeline-item"><div class="timeline-no">07</div><div><h3>Előszűrés</h3><p>Online és telefonos kvalifikáció.</p></div></div>
+<div class="timeline-item"><div class="timeline-no">08</div><div><h3>Interjúkoordináció</h3><p>Személyes interjúk megszervezése és koordinálása.</p></div></div>
+<div class="timeline-item"><div class="timeline-no">09</div><div><h3>Utánkövetés</h3><p>Visszajelzések és kapcsolattartás.</p></div></div>
+<div class="timeline-item"><div class="timeline-no">10</div><div><h3>Belépés</h3><p>Az ajánlattól a sikeres belépésig követjük a folyamatot.</p></div></div>
+</div>
+</div>
 </section>
-
 <section class="guarantee">
- <div class="container guarantee-grid">
-  <div>
-   <div class="kicker">Garancia</div>
-   <h2>Nem csak ígérjük, garanciát is vállalunk!</h2>
-   <p class="copy">A recruitment sikerét nem az mutatja, hogy valaki aláírta a munkaszerződést, hanem az, hogy valóban beválik és a vállalatnál marad.</p>
-  </div>
-  <div>
-   <div class="guarantees">
-    <div class="guarantee-box"><strong class="counter" data-target="1">0</strong><span>HÓNAP<br>BETANÍTOTT MUNKAKÖRÖK</span></div>
-    <div class="guarantee-box"><strong class="counter" data-target="2">0</strong><span>HÓNAP<br>SZAKMUNKÁS ÉS SZAKKÉPZETT POZÍCIÓK</span></div>
-    <div class="guarantee-box"><strong class="counter" data-target="3">0</strong><span>HÓNAP<br>MŰSZAK- ÉS TERÜLETVEZETŐI POZÍCIÓK</span></div>
-   </div>
-   
-  </div>
- </div>
+<div class="container guarantee-grid">
+<div>
+<div class="kicker">Garancia</div>
+<h2>Nem csak ígérjük, garanciát is vállalunk!</h2>
+<p class="copy">A recruitment sikerét nem az mutatja, hogy valaki aláírta a munkaszerződést, hanem az, hogy valóban beválik és a vállalatnál marad.</p>
+</div>
+<div>
+<div class="guarantees">
+<div class="guarantee-box"><strong class="counter" data-target="1">0</strong><span>HÓNAP<br/>BETANÍTOTT MUNKAKÖRÖK</span></div>
+<div class="guarantee-box"><strong class="counter" data-target="2">0</strong><span>HÓNAP<br/>SZAKMUNKÁS ÉS SZAKKÉPZETT POZÍCIÓK</span></div>
+<div class="guarantee-box"><strong class="counter" data-target="3">0</strong><span>HÓNAP<br/>MŰSZAK- ÉS TERÜLETVEZETŐI POZÍCIÓK</span></div>
+</div>
+</div>
+</div>
 </section>
-
-<section id="kapcsolat" class="final">
- <div class="container">
-  <div class="final-grid">
-   <div>
-    <div class="kicker">Következő lépés</div>
-    <h2>Van olyan pozíciója, amit hónapok óta nem sikerül betölteni?</h2>
-    <p class="copy">Lehet, hogy nem egy újabb álláshirdetésre van szüksége!</p>
-    <p class="copy">Ha szakmunkást, operátort, technikust vagy más fizikai állományú munkatársat keres, beszéljük át a pozíciót, és nézzük meg, milyen célzott recruitment stratégiával lehetne elérni azokat a jelölteket, akikhez a hagyományos álláshirdetések már nem jutnak el.</p>
-    <a class="btn" href="#contactForm">KÉREK EGY KONZULTÁCIÓT <span>→</span></a>
-   </div>
-   <div class="contact-card">
-    <small>Tóvizi Levente</small>
-    <strong>Recruitment szakértő</strong>
-    <div>Gyártás. Ipar. Fizikai állomány.<br>Célzott recruitment.</div>
-   </div>
-  </div>
-
-  <div class="form-wrap">
-   <form id="contactForm">
-    <div class="form-grid">
-     <input required placeholder="Név">
-     <input placeholder="Cég">
-    </div>
-    <input required placeholder="E-mail vagy telefonszám" style="margin-top:14px">
-    <textarea placeholder="Üzenet"></textarea>
-    <button class="btn" type="submit">KÜLDÉS <span>→</span></button>
-    <p id="thanks" hidden>Köszönjük! Hamarosan felvesszük Önnel a kapcsolatot.</p>
-   </form>
-  </div>
- </div>
+<section class="final" id="kapcsolat">
+<div class="container">
+<div class="final-grid">
+<div>
+<div class="kicker">Következő lépés</div>
+<h2>Van olyan pozíciója, amit hónapok óta nem sikerül betölteni?</h2>
+<p class="copy">Lehet, hogy nem egy újabb álláshirdetésre van szüksége!</p>
+<p class="copy">Ha szakmunkást, operátort, technikust vagy más fizikai állományú munkatársat keres, beszéljük át a pozíciót, és nézzük meg, milyen célzott recruitment stratégiával lehetne elérni azokat a jelölteket, akikhez a hagyományos álláshirdetések már nem jutnak el.</p>
+<a class="btn" href="#contactForm">KÉREK EGY KONZULTÁCIÓT <span>→</span></a>
+</div>
+<div class="contact-card">
+<small>Tóvizi Levente</small>
+<strong>Recruitment szakértő</strong>
+<div>Gyártás. Ipar. Fizikai állomány.<br/>Célzott recruitment.</div>
+</div>
+</div>
+<div class="form-wrap">
+<form id="contactForm">
+<div class="form-grid">
+<input placeholder="Név" required=""/>
+<input placeholder="Cég"/>
+</div>
+<input placeholder="E-mail vagy telefonszám" required="" style="margin-top:14px"/>
+<textarea placeholder="Üzenet"></textarea>
+<button class="btn" type="submit">KÜLDÉS <span>→</span></button>
+<p hidden="" id="thanks">Köszönjük! Hamarosan felvesszük Önnel a kapcsolatot.</p>
+</form>
+</div>
+</div>
 </section>
-
 </main>
-
 <footer>
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <img class="footer-logo" src="TR_Logo_Black.png" alt="Tóvizi Recruitment">
-      <span>Gyártás · Ipar · Fizikai állomány</span>
-    </div>
-    <div class="footer-contact">
-      <div class="footer-label">Helyszín</div>
-      <div>Budapest, Hungary</div>
-    </div>
-    <div class="footer-contact">
-      <div class="footer-label">LinkedIn</div>
-      <a href="https://www.linkedin.com/in/leventetovizi/" target="_blank" rel="noopener noreferrer">linkedin.com/in/leventetovizi/ ↗</a>
-    </div>
-    <div class="footer-contact">
-      <div class="footer-label">Kapcsolat</div>
-      <a href="mailto:levente@tovizirecruitment.com">✉ levente@tovizirecruitment.com</a>
-      <a href="tel:+36209623682">☎ +36-20-962-3682</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">© Tóvizi Recruitment</div>
+<div class="container footer-inner">
+<div class="footer-brand">
+<img alt="Tóvizi Recruitment" class="footer-logo" src="TR_Logo_Black.png"/>
+<span>Gyártás · Ipar · Fizikai állomány</span>
+</div>
+<div class="footer-contact">
+<div class="footer-label">Helyszín</div>
+<div>Budapest, Hungary</div>
+</div>
+<div class="footer-contact">
+<div class="footer-label">LinkedIn</div>
+<a href="https://www.linkedin.com/in/leventetovizi/" rel="noopener noreferrer" target="_blank">linkedin.com/in/leventetovizi/ ↗</a>
+</div>
+<div class="footer-contact">
+<div class="footer-label">Kapcsolat</div>
+<a href="mailto:levente@tovizirecruitment.com">✉ levente@tovizirecruitment.com</a>
+<a href="tel:+36209623682">☎ +36-20-962-3682</a>
+</div>
+</div>
+<div class="container footer-bottom">© Tóvizi Recruitment</div>
 </footer>
-
 <script id="restored-original-interaction-script">
 (function(){
   const logoLink=document.querySelector('.nav > a:first-child');
@@ -710,7 +583,7 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
   }
 
   const dynamicSelectors=[
-    '.issue-grid .issue','.service-grid .service','.method-card','.target-card','.problem-card','.timeline-item',
+    '.method-card','.target-card','.problem-card','.timeline-item',
     '.guarantee-box','.guarantee-card','.guarantee-item','.step',
     '.stats .stat','.hero-photo','.about-photo','.hero-image','.expert-image'
   ];
@@ -760,8 +633,6 @@ header.nav>a:first-child .logo.logo-click-flip{animation:trLogoClick 560ms cubic
   }else animateCounters();
 })();
 </script>
-
-
 <script id="final-form-script">
 (function(){
   const form=document.getElementById('contactForm');
