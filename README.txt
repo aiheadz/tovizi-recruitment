@@ -1,23 +1,16 @@
-TÓVIZI RECRUITMENT – PRÉMIUM NÉVMEGJELENÉS
+TÓVIZI RECRUITMENT – 2 KÉRT JAVÍTÁS
 
-A funkcionálisan működő, előző verzióból készült csomag.
+A jelenlegi index.html fájlt NEM kell lecserélni.
 
-A személyes név megjelenésén egyetlen változtatás történt:
-- UV-zöld marad a név;
-- nincs fekete kontúr;
-- nincs oldalirányú / eltolással készült árnyék;
-- nincs 3D vagy matricahatás;
-- nagyon közeli, finom fekete kontraszt-halo segíti az olvashatóságot;
-- egy második, nagyon lágy árnyék ad minimális mélységet.
+1. Admin: új személyre szabott linknél csak a „Megszólítás” mező maradt.
+2. A személyre szabott landing név UV-zöld marad, 2px-es fekete eltolt árnyékkal és finom másodlagos árnyékkal.
+3. A D1 struktúra változatlan; a full_name mezőt a backend kompatibilitás miatt automatikusan a megszólítás tölti ki.
+4. A landing többi része változatlan.
 
-Cél: letisztult, prémium tipográfia, ahol a zöld név marad a vizuális fókusz.
-
-Minden más funkció és a landing többi része változatlan.
-
-Ellenőrzés:
-- backend syntax: OK
-- admin inline JS syntax: OK
-- meglévő backend route-ok: OK
-- megszólításos linkgenerálás: OK
-- csak a név CSS-e változott: OK
-- korábbi kontúr/eltolt árnyék nincs: OK
+Ellenőrzések:
+- Backend syntax: OK
+- Admin inline JS syntax: OK
+- Admin UI: OK
+- Linkgenerálás: OK
+- Név árnyék: OK
+- Meglévő route-ok: OK
